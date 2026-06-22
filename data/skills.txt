@@ -1,0 +1,202 @@
+python
+java
+c++
+c
+c#
+javascript
+typescript
+sql
+html
+css
+react
+node.js
+express.js
+
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+scipy
+statsmodels
+
+machine learning
+deep learning
+artificial intelligence
+data science
+data analysis
+predictive analytics
+feature engineering
+feature selection
+data preprocessing
+data cleaning
+data visualization
+exploratory data analysis
+eda
+
+scikit-learn
+tensorflow
+keras
+pytorch
+xgboost
+lightgbm
+catboost
+random forest
+decision tree
+gradient boosting
+adaboost
+svm
+support vector machine
+knn
+k nearest neighbors
+naive bayes
+logistic regression
+linear regression
+k means
+clustering
+pca
+dimensionality reduction
+
+nlp
+natural language processing
+spacy
+nltk
+gensim
+text classification
+sentiment analysis
+named entity recognition
+tokenization
+stemming
+lemmatization
+word embeddings
+
+bert
+roberta
+gpt
+llama
+mistral
+transformers
+hugging face
+sentence transformers
+embedding
+embeddings
+
+generative ai
+large language model
+llm
+rag
+retrieval augmented generation
+prompt engineering
+langchain
+langgraph
+crewai
+agentic ai
+multi agent systems
+vector database
+vector store
+semantic search
+faiss
+chromadb
+pinecone
+weaviate
+
+computer vision
+opencv
+image classification
+object detection
+image segmentation
+ocr
+tesseract
+transfer learning
+mobilenet
+resnet
+yolo
+
+fastapi
+flask
+django
+streamlit
+gradio
+rest api
+api development
+
+docker
+docker compose
+kubernetes
+terraform
+ansible
+jenkins
+github actions
+gitlab ci
+ci/cd
+mlops
+
+git
+github
+linux
+bash
+shell scripting
+
+aws
+amazon web services
+ec2
+s3
+lambda
+api gateway
+cloudwatch
+iam
+ecs
+ecr
+eks
+fargate
+dynamodb
+rds
+sagemaker
+glue
+athena
+redshift
+
+azure
+gcp
+google cloud
+vertex ai
+
+mongodb
+mysql
+postgresql
+sqlite
+redis
+snowflake
+databricks
+
+apache spark
+pyspark
+hadoop
+airflow
+kafka
+etl
+data pipeline
+
+power bi
+tableau
+excel
+
+agile
+scrum
+jira
+
+unit testing
+pytest
+model deployment
+model monitoring
+inference
+batch inference
+real time inference
+
+fraud detection
+recommendation system
+time series forecasting
+forecasting
+anomaly detection
+classification
+regression
