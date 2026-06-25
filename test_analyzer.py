@@ -1,4 +1,4 @@
-from resume_analyser import analyze_resume
+from resume_analyzer import analyze_resume
 
 sample_resume = """
 SKILLS

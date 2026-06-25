@@ -1,0 +1,88 @@
+Ashim Mahajan
+ashimmahajan1@gmail.com
+ 
+7876588091
+ 
+LinkedIn
+ 
+GitHub
+ 
+PROFILE
+Machine Learning Engineer with experience building end-to-end ML pipelines and deploying production 
+inference systems using FastAPI and Docker. Skilled in OCR/document intelligence, computer vision with 
+transfer learning, and LLM-based text processing. Experienced with AWS services (S3, Lambda, EC2) for scalable 
+ML deployment.
+SKILLS
+Machine Learning
+TensorFlow | PyTorch | 
+Scikit-learn | OpenCV | 
+Tesseract
+Programming Language
+Python
+Model Deployment & 
+Engineering Tools
+FastAPI | Flask | Docker | 
+Git | Linux | Shell 
+Scripting
+Cloud
+AWS (S3, Lambda, EC2, 
+API Gateway, 
+DynamoDB, 
+CloudWatch, IAM)
+Data & Databases
+SQL | MongoDB
+EXPERIENCE
+Software Engineer, Tech Mahindra (Client: Nestlé)
+09/2024 – Present  | Bengaluru, India
+•Analyzed structured service telemetry datasets using Python, Pandas, and NumPy to identify behavioral 
+patterns and support anomaly investigation across production environments.
+•Designed and maintained monitoring dashboards across 20+ distributed services using Grafana and New 
+Relic, improving observability and accelerating incident detection workflows.
+•Processed and validated large-scale system logs using Linux CLI pipelines, improving data reliability for 
+downstream analytics and reducing issue resolution time.
+Internship, Python Developer, Supreme Technologies
+06/2024 – 09/2024  | Mohali, India
+•Performed exploratory data analysis on a 5,000+ row employee salary dataset using Pandas, visualizing feature 
+distributions and correlations using Matplotlib and Seaborn to surface key patterns.
+•Handled missing values, engineered features, and built a structured preprocessing pipeline including 
+encoding, imputation, and feature scaling for model readiness.
+•Trained and evaluated regression models, improving predictive performance by upgrading from Linear 
+Regression to Random Forest, reducing prediction error over baseline.
+PERSONAL PROJECTS
+AniLens: Animal Image Classification System⁠
+,
+TensorFlow, MobileNetV2, Flask
+02/2026 – 04/2026
+•Designed a binary image classifier on a 16K-image dataset, progressing from a from-scratch CNN (88% 
+accuracy) to a MobileNetV2 transfer-learning model with staged fine-tuning, reaching 98% accuracy and 0.98 
+F1.
+•Built an embedding-based out-of-distribution detection and multi-crop inference voting to make predictions 
+more robust on ambiguous or unseen inputs.
+•Containerized the application with Docker and deployed it on Hugging Face Spaces, with a Flask API serving 
+real-time predictions.
+HR Intelligence Platform - Attrition Prediction, Salary Insights, 
+Scikit-learn, Random Forest, Flask, MongoDB
+03/2025 – 05/2025
+•Ingested and processed 5K+ HR records from CSV and XLS sources, performing data cleaning, normalization, 
+and structured feature engineering prior to persistence in MongoDB.
+•Trained and evaluated a Decision Tree classifier for attrition prediction, achieving ~88–90% accuracy, and 
+performed feature importance analysis to identify key attrition drivers.
+•Evaluated model performance using precision, recall, and F1 metrics to validate classification reliability 
+beyond accuracy.
+•Served predictions via a Flask API for real-time attrition risk inference.
+CERTIFICATIONS
+AWS Certified Machine Learning Engineer - Associate⁠
+AWS Certified Solutions Architect - Associate⁠
+AWS Certified AI Practitioner⁠
+AWS Certified Cloud Practitioner⁠
+Machine Learning (Coursera)⁠
+EDUCATION
+Chandigarh University, 
+Bachelor of Engineering in Computer Science and Engineering
+2020 – 2024  | Gharuan, Punjab
+Extracurricular
+•Co-authored and published a research paper on Card Transaction Anomaly Detection in digital payment 
+systems, IJARESM, December 2023. Conducted literature review and comparative analysis of fraud detection 
+methodologies for credit card transaction security.
+•Participated in a college-level hackathon, collaborating in a team to design and prototype a real-time web 
+application using Flask and SocketIO within a time-constrained environment.
