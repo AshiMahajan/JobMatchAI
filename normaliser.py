@@ -1,6 +1,6 @@
-# normalizer.py
+from skill_engine import SkillEngine
 
-from aliases import SKILL_ALIASES
+engine = SkillEngine()
 
 
 def normalize_skills(skills):
@@ -9,13 +9,8 @@ def normalize_skills(skills):
 
     for skill in skills:
 
-        skill = skill.lower().strip()
-
         normalized.append(
-            SKILL_ALIASES.get(
-                skill,
-                skill
-            )
+            engine.normalize(skill)
         )
 
-    return normalized
+    return list(set(normalized))

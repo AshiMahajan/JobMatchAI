@@ -1,0 +1,79 @@
+[
+    {
+        "id": "python",
+        "name": "Python",
+        "aliases": [
+            "python",
+            "python3",
+            "py"
+        ],
+        "category": "Programming Language",
+        "parent": null,
+        "related": [
+            "FastAPI",
+            "Flask",
+            "Django",
+            "Pandas",
+            "NumPy",
+            "TensorFlow",
+            "PyTorch"
+        ]
+    },
+    {
+        "id": "aws",
+        "name": "AWS",
+        "aliases": [
+            "aws",
+            "amazon web services"
+        ],
+        "category": "Cloud",
+        "parent": null,
+        "related": [
+            "EC2",
+            "S3",
+            "Lambda",
+            "IAM",
+            "CloudWatch"
+        ]
+    },
+    {
+        "id": "docker",
+        "name": "Docker",
+        "aliases": [
+            "docker"
+        ],
+        "category": "Containerization",
+        "parent": null,
+        "related": [
+            "Kubernetes"
+        ]
+    },
+    {
+        "id": "kubernetes",
+        "name": "Kubernetes",
+        "aliases": [
+            "k8s",
+            "kubernetes"
+        ],
+        "category": "Container Orchestration",
+        "parent": "Docker",
+        "related": [
+            "Docker",
+            "Helm"
+        ]
+    },
+    {
+        "id": "tensorflow",
+        "name": "TensorFlow",
+        "aliases": [
+            "tensorflow",
+            "tf"
+        ],
+        "category": "Deep Learning",
+        "parent": "Python",
+        "related": [
+            "Keras",
+            "PyTorch"
+        ]
+    }
+]
