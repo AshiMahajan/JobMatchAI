@@ -41,7 +41,7 @@ AWS
 
 result = analyze_market(
 
-    resume["resume_skills"],
+    resume.skills,
 
     job_descriptions
 
