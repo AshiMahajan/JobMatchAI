@@ -1,14 +1,16 @@
-# services/ats_service.py
+from services.skill_service import SkillService
 
-from skill_extractor import extract_skills
 from ats_engine import calculate_ats_score
 
-from alias_matcher import alias_match
+skill_service = SkillService()
+
+
 def analyze_resume_vs_jd(
         resume_skills,
-        job_description):
+        job_description
+):
 
-    jd_skills = extract_skills(
+    jd_skills = skill_service.extract_names(
         job_description
     )
 
