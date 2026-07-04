@@ -75,5 +75,27 @@
             "Keras",
             "PyTorch"
         ]
+    },
+    {
+    "id": "llm",
+    "name": "Large Language Models",
+    "aliases": [
+        "llm",
+        "llms",
+        "large language model",
+        "large language models",
+        "large language model (llm)",
+        "large language models (llms)"
+    ],
+    "category": "Artificial Intelligence",
+    "parent": null,
+    "related": [
+        "LangChain",
+        "LangGraph",
+        "RAG",
+        "Prompt Engineering",
+        "OpenAI",
+        "Claude"
+    ]
     }
 ]
