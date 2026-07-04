@@ -1,12 +1,27 @@
-\# JobMatch AI
+# JobMatch AI
 
+## Overview
 
+## Why this project?
 
-NLP-based resume vs. job description matcher. Extracts skills, computes
+## Features
 
-semantic similarity, and generates an ATS-style compatibility score.
+## System Architecture
 
+## Tech Stack
 
+## Project Structure
 
-\*\*Status:\*\* In development.
+## Installation
 
+## Running the API
+
+## API Endpoints
+
+## Current Status
+
+## Roadmap
+
+## Screenshots (later)
+
+## License
