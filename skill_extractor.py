@@ -3,24 +3,62 @@ from spacy.matcher import PhraseMatcher
 
 nlp = spacy.load("en_core_web_sm")
 
-with open("data/skills.txt", "r", encoding="utf-8") as f:
-    skills = [line.strip().lower() for line in f if line.strip()]
+matcher = PhraseMatcher(
+    nlp.vocab,
+    attr="LOWER"
+)
 
-matcher = PhraseMatcher(nlp.vocab, attr="LOWER")
+# ---------------------------------------
+# Load Skill Vocabulary
+# ---------------------------------------
 
-patterns = [nlp.make_doc(skill) for skill in skills]
+with open(
+        "data/skills.txt",
+        "r",
+        encoding="utf-8"
+) as f:
 
-matcher.add("SKILLS", patterns)
+    skills = [
 
-def extract_skills(text):
+        line.strip()
+
+        for line in f
+
+        if line.strip()
+
+    ]
+
+patterns = [
+
+    nlp.make_doc(skill)
+
+    for skill in skills
+
+]
+
+matcher.add(
+    "SKILLS",
+    patterns
+)
+
+# ---------------------------------------
+# Skill Extraction
+# ---------------------------------------
+
+def extract_skills(text: str):
+
     doc = nlp(text)
 
     matches = matcher(doc)
 
-    found_skills = set()
+    found = set()
 
-    for match_id, start, end in matches:
-        skill = doc[start:end].text.lower()
-        found_skills.add(skill)
+    for _, start, end in matches:
 
-    return sorted(found_skills)
+        found.add(
+
+            doc[start:end].text
+
+        )
+
+    return sorted(found)
