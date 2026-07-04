@@ -9,8 +9,10 @@ class SkillEngine:
 
     # -------------------------
 
-    def normalize(self,
-                  skill):
+    def normalize(
+            self,
+            skill
+    ):
 
         canonical = self.kb.find_canonical_skill(
             skill
@@ -20,12 +22,14 @@ class SkillEngine:
 
             return canonical
 
-        return skill.title()
+        return skill.strip()
 
     # -------------------------
 
-    def describe(self,
-                 skill):
+    def describe(
+            self,
+            skill
+    ):
 
         canonical = self.normalize(
             skill
@@ -35,22 +39,49 @@ class SkillEngine:
             canonical
         )
 
+        # -------------------------
+        # Known Skill
+        # -------------------------
+
         if info:
+
+            info = info.copy()
+
+            info["status"] = "known"
 
             return info
 
+        # -------------------------
+        # Unknown Skill
+        # -------------------------
+
+        self.kb.record_unknown_skill(
+            canonical
+        )
+
         return {
+
             "id": canonical.lower(),
+
             "name": canonical,
+
             "aliases": [],
+
             "category": "Unknown",
+
+            "parent": None,
+
             "related": [],
-            "parent": None
-}
+
+            "status": "unknown"
+        }
+
     # -------------------------
 
-    def infer_parent_skill(self,
-                           skill):
+    def infer_parent_skill(
+            self,
+            skill
+    ):
 
         canonical = self.normalize(
             skill
@@ -62,8 +93,10 @@ class SkillEngine:
 
     # -------------------------
 
-    def related_skills(self,
-                       skill):
+    def related_skills(
+            self,
+            skill
+    ):
 
         canonical = self.normalize(
             skill
