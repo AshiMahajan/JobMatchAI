@@ -23,7 +23,7 @@ The architecture follows these principles:
 
 # High-Level Architecture
 
-![JobMatch AI Architecture](IMAGES/architecture_overview.png)
+![JobMatch AI Architecture](docs/images/architecture_overview.png)
 
 ---
 
@@ -170,106 +170,6 @@ The Knowledge Base is responsible for understanding skills, not detecting them.
 Tracks manually queried skills that are currently unknown to the Knowledge Base.
 
 These entries can later be reviewed and incorporated into the Knowledge Base.
-
----
-
-# Runtime Data Flow
-
-## Resume Analysis (/analyze)
-
-Resume PDF
-
-↓
-
-Resume Service
-
-↓
-
-Resume Text
-
-↓
-
-Skill Service
-
-↓
-
-Skill Extractor
-
-↓
-
-skills.txt
-
-↓
-
-Canonical Resume Skills
-
-──────────────
-
-Job Description
-
-↓
-
-Skill Service
-
-↓
-
-Skill Extractor
-
-↓
-
-skills.txt
-
-↓
-
-Canonical JD Skills
-
-──────────────
-
-ATS Engine
-
-↓
-
-ATS Score
-
-Matched Skills
-
-Missing Skills
-
-Recommendations
-
----
-
-## JD Skill Extraction (/extract-jd-skills)
-
-Job Description
-
-↓
-
-Skill Service
-
-↓
-
-Skill Extractor
-
-↓
-
-skills.txt
-
-↓
-
-Detected Skills
-
-↓
-
-Skill Engine
-
-↓
-
-knowledge_base.json
-
-↓
-
-Enriched Skills
 
 ---
 
