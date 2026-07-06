@@ -11,7 +11,10 @@ class SkillService:
 
     # ----------------------------------
 
-    def extract(self, text):
+    def extract(
+            self,
+            text: str
+    ) -> list[dict]:
 
         raw_skills = extract_skills(
             text
@@ -33,7 +36,10 @@ class SkillService:
 
     # ----------------------------------
 
-    def extract_names(self, text):
+    def extract_names(
+            self,
+            text: str
+    ) -> list[str]:
 
         skills = self.extract(
             text
@@ -49,7 +55,10 @@ class SkillService:
 
     # ----------------------------------
 
-    def extract_known(self, text):
+    def extract_known(
+            self,
+            text: str
+    ) -> list[dict]:
 
         skills = self.extract(
             text
@@ -67,7 +76,10 @@ class SkillService:
 
     # ----------------------------------
 
-    def extract_unknown(self, text):
+    def extract_unknown(
+            self,
+            text: str
+    ) -> list[dict]:
 
         skills = self.extract(
             text
