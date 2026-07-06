@@ -5,5 +5,7 @@ class JDRequest(BaseModel):
 
     job_description: str
 
+
 class SkillRequest(BaseModel):
+
     skill: str
