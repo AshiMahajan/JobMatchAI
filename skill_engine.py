@@ -7,12 +7,12 @@ class SkillEngine:
 
         self.kb = SkillKnowledgeBase()
 
-    # -------------------------
+    # ----------------------------------
 
     def normalize(
             self,
-            skill
-    ):
+            skill: str
+    ) -> str:
 
         canonical = self.kb.find_canonical_skill(
             skill
@@ -24,12 +24,12 @@ class SkillEngine:
 
         return skill.strip()
 
-    # -------------------------
+    # ----------------------------------
 
     def describe(
             self,
-            skill
-    ):
+            skill: str
+    ) -> dict:
 
         canonical = self.normalize(
             skill
@@ -39,33 +39,22 @@ class SkillEngine:
             canonical
         )
 
-        # -------------------------
-        # Known Skill
-        # -------------------------
-
+        # Skill exists in the Knowledge Base
         if info:
 
-            info = info.copy()
+            return info.copy()
 
-            info["status"] = "known"
-
-            return info
-
-        # -------------------------
-        # Unknown Skill
-        # -------------------------
-
-        self.kb.record_unknown_skill(
-            canonical
-        )
-
+        # Placeholder for a detected skill that
+        # has not yet been enriched.
         return {
 
             "id": canonical.lower(),
 
             "name": canonical,
 
-            "aliases": [],
+            "aliases": [
+                canonical.lower()
+            ],
 
             "category": "Unknown",
 
@@ -73,15 +62,18 @@ class SkillEngine:
 
             "related": [],
 
-            "status": "unknown"
+            "status": "placeholder",
+
+            "status":"unknown"
+
         }
 
-    # -------------------------
+    # ----------------------------------
 
     def infer_parent_skill(
             self,
-            skill
-    ):
+            skill: str
+    ) -> str | None:
 
         canonical = self.normalize(
             skill
@@ -91,12 +83,12 @@ class SkillEngine:
             canonical
         )
 
-    # -------------------------
+    # ----------------------------------
 
     def related_skills(
             self,
-            skill
-    ):
+            skill: str
+    ) -> list[str]:
 
         canonical = self.normalize(
             skill
