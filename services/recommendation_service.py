@@ -1,22 +1,22 @@
-# services/recommendation_service.py
-
-def get_match_level(score):
+def get_match_level(
+    score: float
+) -> str:
 
     if score >= 80:
         return "Strong Match"
 
-    elif score >= 60:
+    if score >= 60:
         return "Good Match"
 
-    elif score >= 40:
+    if score >= 40:
         return "Moderate Match"
 
-    else:
-        return "Weak Match"
+    return "Weak Match"
 
 
 def generate_recommendations(
-        missing_skills):
+    missing_skills: list[str]
+) -> list[str]:
 
     recommendations = []
 
