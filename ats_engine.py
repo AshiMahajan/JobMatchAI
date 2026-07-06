@@ -53,7 +53,7 @@ def calculate_ats_score(
     # Remaining JD Skills
     # ======================
 
-    remaining_jd_skills = []
+    unmatched_jd_skills = []
 
     for skill in jd_skills:
 
@@ -65,7 +65,7 @@ def calculate_ats_score(
         if skill_lower in alias_jd_skills:
             continue
 
-        remaining_jd_skills.append(
+        unmatched_jd_skills.append(
             skill
         )
 
@@ -73,9 +73,9 @@ def calculate_ats_score(
     # Semantic Matches
     # ======================
 
-    semantic_matches, semantic_missing = semantic_match(
+    semantic_matches, missing_skills = semantic_match(
         resume_skills,
-        remaining_jd_skills
+        unmatched_jd_skills
     )
 
     # ======================
@@ -115,7 +115,7 @@ def calculate_ats_score(
 
     recommendations = (
         generate_recommendations(
-            semantic_missing
+            missing_skills
         )
     )
 
@@ -135,7 +135,7 @@ def calculate_ats_score(
 
         "semantic_matches": semantic_matches,
 
-        "missing_skills": semantic_missing,
+        "missing_skills": missing_skills,
 
         "recommendations": recommendations
     }
