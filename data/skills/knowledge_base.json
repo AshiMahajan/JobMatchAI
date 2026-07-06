@@ -1,40 +1,487 @@
 [
     {
-        "id": "python",
-        "name": "Python",
+        "id": "adaboost",
+        "name": "AdaBoost",
         "aliases": [
-            "python",
-            "python3",
-            "py"
+            "adaboost"
         ],
-        "category": "Programming Language",
+        "category": "Pending",
         "parent": null,
-        "related": [
-            "FastAPI",
-            "Flask",
-            "Django",
-            "Pandas",
-            "NumPy",
-            "TensorFlow",
-            "PyTorch"
-        ]
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "agentic_ai",
+        "name": "Agentic AI",
+        "aliases": [
+            "agentic ai"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "agile",
+        "name": "Agile",
+        "aliases": [
+            "agile"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "amazon_bedrock",
+        "name": "Amazon Bedrock",
+        "aliases": [
+            "amazon bedrock"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "amazon_web_services",
+        "name": "Amazon Web Services",
+        "aliases": [
+            "amazon web services"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "anomaly_detection",
+        "name": "Anomaly Detection",
+        "aliases": [
+            "anomaly detection"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "ansible",
+        "name": "Ansible",
+        "aliases": [
+            "ansible"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "apache_airflow",
+        "name": "Apache Airflow",
+        "aliases": [
+            "apache airflow"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "apache_kafka",
+        "name": "Apache Kafka",
+        "aliases": [
+            "apache kafka"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "apache_spark",
+        "name": "Apache Spark",
+        "aliases": [
+            "apache spark"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "api_development",
+        "name": "API Development",
+        "aliases": [
+            "api development"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "api_gateway",
+        "name": "API Gateway",
+        "aliases": [
+            "api gateway"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "artificial_intelligence",
+        "name": "Artificial Intelligence",
+        "aliases": [
+            "artificial intelligence"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "athena",
+        "name": "Athena",
+        "aliases": [
+            "athena"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
     },
     {
         "id": "aws",
         "name": "AWS",
         "aliases": [
-            "aws",
-            "amazon web services"
+            "aws"
         ],
-        "category": "Cloud",
+        "category": "Pending",
         "parent": null,
-        "related": [
-            "EC2",
-            "S3",
-            "Lambda",
-            "IAM",
-            "CloudWatch"
-        ]
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "azure",
+        "name": "Azure",
+        "aliases": [
+            "azure"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "bash",
+        "name": "Bash",
+        "aliases": [
+            "bash"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "batch_inference",
+        "name": "Batch Inference",
+        "aliases": [
+            "batch inference"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "bert",
+        "name": "BERT",
+        "aliases": [
+            "bert"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "c",
+        "name": "C",
+        "aliases": [
+            "c"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "c#",
+        "name": "C#",
+        "aliases": [
+            "c#"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "c++",
+        "name": "C++",
+        "aliases": [
+            "c++"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "catboost",
+        "name": "CatBoost",
+        "aliases": [
+            "catboost"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "chromadb",
+        "name": "ChromaDB",
+        "aliases": [
+            "chromadb"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "ci/cd",
+        "name": "CI/CD",
+        "aliases": [
+            "ci/cd"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "classification",
+        "name": "Classification",
+        "aliases": [
+            "classification"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "claude_api",
+        "name": "Claude API",
+        "aliases": [
+            "claude api"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "cloudwatch",
+        "name": "CloudWatch",
+        "aliases": [
+            "cloudwatch"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "clustering",
+        "name": "Clustering",
+        "aliases": [
+            "clustering"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "computer_vision",
+        "name": "Computer Vision",
+        "aliases": [
+            "computer vision"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "crewai",
+        "name": "CrewAI",
+        "aliases": [
+            "crewai"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "css",
+        "name": "CSS",
+        "aliases": [
+            "css"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "data_analysis",
+        "name": "Data Analysis",
+        "aliases": [
+            "data analysis"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "data_cleaning",
+        "name": "Data Cleaning",
+        "aliases": [
+            "data cleaning"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "data_pipeline",
+        "name": "Data Pipeline",
+        "aliases": [
+            "data pipeline"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "data_preprocessing",
+        "name": "Data Preprocessing",
+        "aliases": [
+            "data preprocessing"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "data_science",
+        "name": "Data Science",
+        "aliases": [
+            "data science"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "data_visualization",
+        "name": "Data Visualization",
+        "aliases": [
+            "data visualization"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "databricks",
+        "name": "Databricks",
+        "aliases": [
+            "databricks"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "dbt",
+        "name": "dbt",
+        "aliases": [
+            "dbt"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "decision_tree",
+        "name": "Decision Tree",
+        "aliases": [
+            "decision tree"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "deep_learning",
+        "name": "Deep Learning",
+        "aliases": [
+            "deep learning"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "dimensionality_reduction",
+        "name": "Dimensionality Reduction",
+        "aliases": [
+            "dimensionality reduction"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "django",
+        "name": "Django",
+        "aliases": [
+            "django"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
     },
     {
         "id": "docker",
@@ -42,60 +489,1637 @@
         "aliases": [
             "docker"
         ],
-        "category": "Containerization",
+        "category": "Pending",
         "parent": null,
-        "related": [
-            "Kubernetes"
-        ]
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "docker_compose",
+        "name": "Docker Compose",
+        "aliases": [
+            "docker compose"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "dynamodb",
+        "name": "DynamoDB",
+        "aliases": [
+            "dynamodb"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "ec2",
+        "name": "EC2",
+        "aliases": [
+            "ec2"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "ecr",
+        "name": "ECR",
+        "aliases": [
+            "ecr"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "ecs",
+        "name": "ECS",
+        "aliases": [
+            "ecs"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "eks",
+        "name": "EKS",
+        "aliases": [
+            "eks"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "embedding",
+        "name": "Embedding",
+        "aliases": [
+            "embedding"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "embeddings",
+        "name": "Embeddings",
+        "aliases": [
+            "embeddings"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "etl",
+        "name": "ETL",
+        "aliases": [
+            "etl"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "excel",
+        "name": "Excel",
+        "aliases": [
+            "excel"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "exploratory_data_analysis",
+        "name": "Exploratory Data Analysis",
+        "aliases": [
+            "exploratory data analysis"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "express.js",
+        "name": "Express.js",
+        "aliases": [
+            "express.js"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "faiss",
+        "name": "FAISS",
+        "aliases": [
+            "faiss"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "fargate",
+        "name": "Fargate",
+        "aliases": [
+            "fargate"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "fastapi",
+        "name": "FastAPI",
+        "aliases": [
+            "fastapi"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "feature_engineering",
+        "name": "Feature Engineering",
+        "aliases": [
+            "feature engineering"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "feature_selection",
+        "name": "Feature Selection",
+        "aliases": [
+            "feature selection"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "flask",
+        "name": "Flask",
+        "aliases": [
+            "flask"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "forecasting",
+        "name": "Forecasting",
+        "aliases": [
+            "forecasting"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "fraud_detection",
+        "name": "Fraud Detection",
+        "aliases": [
+            "fraud detection"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "gcp",
+        "name": "GCP",
+        "aliases": [
+            "gcp"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "gemini_api",
+        "name": "Gemini API",
+        "aliases": [
+            "gemini api"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "generative_ai",
+        "name": "Generative AI",
+        "aliases": [
+            "generative ai"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "gensim",
+        "name": "Gensim",
+        "aliases": [
+            "gensim"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "git",
+        "name": "Git",
+        "aliases": [
+            "git"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "github",
+        "name": "GitHub",
+        "aliases": [
+            "github"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "github_actions",
+        "name": "GitHub Actions",
+        "aliases": [
+            "github actions"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "gitlab_ci",
+        "name": "GitLab CI",
+        "aliases": [
+            "gitlab ci"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "glue",
+        "name": "Glue",
+        "aliases": [
+            "glue"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "google_cloud",
+        "name": "Google Cloud",
+        "aliases": [
+            "google cloud"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "gpt",
+        "name": "GPT",
+        "aliases": [
+            "gpt"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "gradient_boosting",
+        "name": "Gradient Boosting",
+        "aliases": [
+            "gradient boosting"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "gradio",
+        "name": "Gradio",
+        "aliases": [
+            "gradio"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "html",
+        "name": "HTML",
+        "aliases": [
+            "html"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "hugging_face",
+        "name": "Hugging Face",
+        "aliases": [
+            "hugging face"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "iam",
+        "name": "IAM",
+        "aliases": [
+            "iam"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "image_classification",
+        "name": "Image Classification",
+        "aliases": [
+            "image classification"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "image_segmentation",
+        "name": "Image Segmentation",
+        "aliases": [
+            "image segmentation"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "inference",
+        "name": "Inference",
+        "aliases": [
+            "inference"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "java",
+        "name": "Java",
+        "aliases": [
+            "java"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "javascript",
+        "name": "JavaScript",
+        "aliases": [
+            "javascript"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "jenkins",
+        "name": "Jenkins",
+        "aliases": [
+            "jenkins"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "jira",
+        "name": "Jira",
+        "aliases": [
+            "jira"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "k_nearest_neighbors",
+        "name": "K Nearest Neighbors",
+        "aliases": [
+            "k nearest neighbors"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "k-means",
+        "name": "K-Means",
+        "aliases": [
+            "k-means"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "keras",
+        "name": "Keras",
+        "aliases": [
+            "keras"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "knn",
+        "name": "KNN",
+        "aliases": [
+            "knn"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
     },
     {
         "id": "kubernetes",
         "name": "Kubernetes",
         "aliases": [
-            "k8s",
             "kubernetes"
         ],
-        "category": "Container Orchestration",
-        "parent": "Docker",
-        "related": [
-            "Docker",
-            "Helm"
-        ]
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "lambda",
+        "name": "Lambda",
+        "aliases": [
+            "lambda"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "langchain",
+        "name": "LangChain",
+        "aliases": [
+            "langchain"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "langgraph",
+        "name": "LangGraph",
+        "aliases": [
+            "langgraph"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "large_language_model",
+        "name": "Large Language Model",
+        "aliases": [
+            "large language model"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "lemmatization",
+        "name": "Lemmatization",
+        "aliases": [
+            "lemmatization"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "lightgbm",
+        "name": "LightGBM",
+        "aliases": [
+            "lightgbm"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "linear_regression",
+        "name": "Linear Regression",
+        "aliases": [
+            "linear regression"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "linux",
+        "name": "Linux",
+        "aliases": [
+            "linux"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "litellm",
+        "name": "LiteLLM",
+        "aliases": [
+            "litellm"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "llama",
+        "name": "Llama",
+        "aliases": [
+            "llama"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "llm",
+        "name": "LLM",
+        "aliases": [
+            "llm"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "logistic_regression",
+        "name": "Logistic Regression",
+        "aliases": [
+            "logistic regression"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "machine_learning",
+        "name": "Machine Learning",
+        "aliases": [
+            "machine learning"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "matplotlib",
+        "name": "Matplotlib",
+        "aliases": [
+            "matplotlib"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "mcp",
+        "name": "MCP",
+        "aliases": [
+            "mcp"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "mistral",
+        "name": "Mistral",
+        "aliases": [
+            "mistral"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "mlflow",
+        "name": "MLflow",
+        "aliases": [
+            "mlflow"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "mlops",
+        "name": "MLOps",
+        "aliases": [
+            "mlops"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "mobilenet",
+        "name": "MobileNet",
+        "aliases": [
+            "mobilenet"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "model_context_protocol",
+        "name": "Model Context Protocol",
+        "aliases": [
+            "model context protocol"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "model_deployment",
+        "name": "Model Deployment",
+        "aliases": [
+            "model deployment"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "model_monitoring",
+        "name": "Model Monitoring",
+        "aliases": [
+            "model monitoring"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "mongodb",
+        "name": "MongoDB",
+        "aliases": [
+            "mongodb"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "multi_agent_systems",
+        "name": "Multi Agent Systems",
+        "aliases": [
+            "multi agent systems"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "mysql",
+        "name": "MySQL",
+        "aliases": [
+            "mysql"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "naive_bayes",
+        "name": "Naive Bayes",
+        "aliases": [
+            "naive bayes"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "named_entity_recognition",
+        "name": "Named Entity Recognition",
+        "aliases": [
+            "named entity recognition"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "natural_language_processing",
+        "name": "Natural Language Processing",
+        "aliases": [
+            "natural language processing"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "neo4j",
+        "name": "Neo4j",
+        "aliases": [
+            "neo4j"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "nlp",
+        "name": "NLP",
+        "aliases": [
+            "nlp"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "nltk",
+        "name": "NLTK",
+        "aliases": [
+            "nltk"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "node.js",
+        "name": "Node.js",
+        "aliases": [
+            "node.js"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "numpy",
+        "name": "NumPy",
+        "aliases": [
+            "numpy"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "object_detection",
+        "name": "Object Detection",
+        "aliases": [
+            "object detection"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "ocr",
+        "name": "OCR",
+        "aliases": [
+            "ocr"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "ollama",
+        "name": "Ollama",
+        "aliases": [
+            "ollama"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "openai_api",
+        "name": "OpenAI API",
+        "aliases": [
+            "openai api"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "opencv",
+        "name": "OpenCV",
+        "aliases": [
+            "opencv"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "pandas",
+        "name": "Pandas",
+        "aliases": [
+            "pandas"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "pca",
+        "name": "PCA",
+        "aliases": [
+            "pca"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "pinecone",
+        "name": "Pinecone",
+        "aliases": [
+            "pinecone"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "plotly",
+        "name": "Plotly",
+        "aliases": [
+            "plotly"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "postgresql",
+        "name": "PostgreSQL",
+        "aliases": [
+            "postgresql"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "power_bi",
+        "name": "Power BI",
+        "aliases": [
+            "power bi"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "predictive_analytics",
+        "name": "Predictive Analytics",
+        "aliases": [
+            "predictive analytics"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "prompt_engineering",
+        "name": "Prompt Engineering",
+        "aliases": [
+            "prompt engineering"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "pyspark",
+        "name": "PySpark",
+        "aliases": [
+            "pyspark"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "python",
+        "name": "Python",
+        "aliases": [
+            "python"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "pytorch",
+        "name": "PyTorch",
+        "aliases": [
+            "pytorch"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "rag",
+        "name": "RAG",
+        "aliases": [
+            "rag"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "random_forest",
+        "name": "Random Forest",
+        "aliases": [
+            "random forest"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "rds",
+        "name": "RDS",
+        "aliases": [
+            "rds"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "react",
+        "name": "React",
+        "aliases": [
+            "react"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "real_time_inference",
+        "name": "Real Time Inference",
+        "aliases": [
+            "real time inference"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "recommendation_system",
+        "name": "Recommendation System",
+        "aliases": [
+            "recommendation system"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "redis",
+        "name": "Redis",
+        "aliases": [
+            "redis"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "redshift",
+        "name": "Redshift",
+        "aliases": [
+            "redshift"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "regression",
+        "name": "Regression",
+        "aliases": [
+            "regression"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "resnet",
+        "name": "ResNet",
+        "aliases": [
+            "resnet"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "rest_api",
+        "name": "REST API",
+        "aliases": [
+            "rest api"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "retrieval_augmented_generation",
+        "name": "Retrieval Augmented Generation",
+        "aliases": [
+            "retrieval augmented generation"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "roberta",
+        "name": "RoBERTa",
+        "aliases": [
+            "roberta"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "s3",
+        "name": "S3",
+        "aliases": [
+            "s3"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "sagemaker",
+        "name": "SageMaker",
+        "aliases": [
+            "sagemaker"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "scikit-learn",
+        "name": "Scikit-learn",
+        "aliases": [
+            "scikit-learn"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "scipy",
+        "name": "SciPy",
+        "aliases": [
+            "scipy"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "scrum",
+        "name": "Scrum",
+        "aliases": [
+            "scrum"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "seaborn",
+        "name": "Seaborn",
+        "aliases": [
+            "seaborn"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "semantic_search",
+        "name": "Semantic Search",
+        "aliases": [
+            "semantic search"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "sentence_transformers",
+        "name": "Sentence Transformers",
+        "aliases": [
+            "sentence transformers"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "sentiment_analysis",
+        "name": "Sentiment Analysis",
+        "aliases": [
+            "sentiment analysis"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "shell_scripting",
+        "name": "Shell Scripting",
+        "aliases": [
+            "shell scripting"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "snowflake",
+        "name": "Snowflake",
+        "aliases": [
+            "snowflake"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "snowpark",
+        "name": "Snowpark",
+        "aliases": [
+            "snowpark"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "spacy",
+        "name": "spaCy",
+        "aliases": [
+            "spacy"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "sql",
+        "name": "SQL",
+        "aliases": [
+            "sql"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "sqlite",
+        "name": "SQLite",
+        "aliases": [
+            "sqlite"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "statsmodels",
+        "name": "Statsmodels",
+        "aliases": [
+            "statsmodels"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "stemming",
+        "name": "Stemming",
+        "aliases": [
+            "stemming"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "streamlit",
+        "name": "Streamlit",
+        "aliases": [
+            "streamlit"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "support_vector_machine",
+        "name": "Support Vector Machine",
+        "aliases": [
+            "support vector machine"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "svm",
+        "name": "SVM",
+        "aliases": [
+            "svm"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "tableau",
+        "name": "Tableau",
+        "aliases": [
+            "tableau"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
     },
     {
         "id": "tensorflow",
         "name": "TensorFlow",
         "aliases": [
-            "tensorflow",
-            "tf"
+            "tensorflow"
         ],
-        "category": "Deep Learning",
-        "parent": "Python",
-        "related": [
-            "Keras",
-            "PyTorch"
-        ]
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
     },
     {
-    "id": "llm",
-    "name": "Large Language Models",
-    "aliases": [
-        "llm",
-        "llms",
-        "large language model",
-        "large language models",
-        "large language model (llm)",
-        "large language models (llms)"
-    ],
-    "category": "Artificial Intelligence",
-    "parent": null,
-    "related": [
-        "LangChain",
-        "LangGraph",
-        "RAG",
-        "Prompt Engineering",
-        "OpenAI",
-        "Claude"
-    ]
+        "id": "terraform",
+        "name": "Terraform",
+        "aliases": [
+            "terraform"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "tesseract",
+        "name": "Tesseract",
+        "aliases": [
+            "tesseract"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "text_classification",
+        "name": "Text Classification",
+        "aliases": [
+            "text classification"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "time_series_forecasting",
+        "name": "Time Series Forecasting",
+        "aliases": [
+            "time series forecasting"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "tokenization",
+        "name": "Tokenization",
+        "aliases": [
+            "tokenization"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "transfer_learning",
+        "name": "Transfer Learning",
+        "aliases": [
+            "transfer learning"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "transformers",
+        "name": "Transformers",
+        "aliases": [
+            "transformers"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "typescript",
+        "name": "TypeScript",
+        "aliases": [
+            "typescript"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "vector_database",
+        "name": "Vector Database",
+        "aliases": [
+            "vector database"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "vector_store",
+        "name": "Vector Store",
+        "aliases": [
+            "vector store"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "vertex_ai",
+        "name": "Vertex AI",
+        "aliases": [
+            "vertex ai"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "vllm",
+        "name": "vLLM",
+        "aliases": [
+            "vllm"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "weaviate",
+        "name": "Weaviate",
+        "aliases": [
+            "weaviate"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "word_embeddings",
+        "name": "Word Embeddings",
+        "aliases": [
+            "word embeddings"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "xgboost",
+        "name": "XGBoost",
+        "aliases": [
+            "xgboost"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
+    },
+    {
+        "id": "yolo",
+        "name": "YOLO",
+        "aliases": [
+            "yolo"
+        ],
+        "category": "Pending",
+        "parent": null,
+        "related": [],
+        "status": "pending"
     }
 ]
