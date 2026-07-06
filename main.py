@@ -2,35 +2,44 @@ from fastapi import (
     FastAPI,
     UploadFile,
     File,
-    Form
+    Form,
 )
 
 import os
 import shutil
 
+from core.config import UPLOADS_DIR
 from schemas import JDRequest
 
 from services.resume_service import (
-    extract_resume_skills
+    extract_resume_skills,
 )
 
 from services.ats_service import (
-    analyze_resume_vs_jd
+    analyze_resume_vs_jd,
 )
 
 from services.skill_service import (
-    SkillService
+    SkillService,
 )
 
 from api.router import router
 
+from fastapi import HTTPException
+
+from core.config import (
+    UPLOADS_DIR
+)
+
+from core.logger import logger
+
+from core.config import (
+    UPLOADS_DIR
+)
 
 app = FastAPI(
-
     title="JobMatch AI",
-
-    version="1.0"
-
+    version="1.0",
 )
 
 app.include_router(router)
@@ -39,35 +48,29 @@ skill_service = SkillService()
 
 
 @app.get("/")
-def home():
+def home() -> dict:
 
     return {
-
         "message": "JobMatch AI API Running"
-
     }
 
 
 @app.get("/health")
-def health():
+def health() -> dict:
 
     return {
-
         "status": "healthy"
-
     }
 
 
 @app.post("/extract-jd-skills")
 def extract_jd_skills(
         request: JDRequest
-):
+) -> dict:
 
     return {
 
-        "skills":
-
-        skill_service.extract(
+        "skills": skill_service.extract(
 
             request.job_description
 
@@ -82,48 +85,75 @@ async def analyze_resume_jd(
         resume_file: UploadFile = File(...),
 
         job_description: str = Form(...)
+
 ):
 
-    temp_path = (
+    if not resume_file.filename.lower().endswith(".pdf"):
 
-        f"uploads/{resume_file.filename}"
+        logger.error(
+            "Unsupported file type uploaded: %s",
+            resume_file.filename
+        )
 
+        raise HTTPException(
+        status_code=400,
+        detail="Only PDF resumes are currently supported."
+        )
+
+    UPLOADS_DIR.mkdir(
+        parents=True,
+        exist_ok=True
     )
 
-    with open(
+    temp_path = (
+        UPLOADS_DIR / resume_file.filename
+    )
 
-            temp_path,
+    try:
 
-            "wb"
+        with open(
+                temp_path,
+                "wb"
+        ) as buffer:
 
-    ) as buffer:
+            shutil.copyfileobj(
+                resume_file.file,
+                buffer
+            )
 
-        shutil.copyfileobj(
+        resume = extract_resume_skills(
+            str(temp_path)
+        )
 
-            resume_file.file,
+        result = analyze_resume_vs_jd(
 
-            buffer
+            resume.skills,
+
+            job_description
 
         )
 
-    resume = extract_resume_skills(
+        logger.info(
+            "Resume analyzed successfully: %s",
+            resume_file.filename
+        )
 
-        temp_path
+        return result
 
-    )
+    except Exception as error:
 
-    result = analyze_resume_vs_jd(
+        logger.error(
+            "Resume analysis failed: %s",
+            resume_file.filename
+        )
 
-        resume.skills,
+        raise HTTPException(
+            status_code=500,
+            detail="Failed to analyze the uploaded resume."
+        ) from error
 
-        job_description
+    finally:
 
-    )
+        if temp_path.exists():
 
-    os.remove(
-
-        temp_path
-
-    )
-
-    return result
+            temp_path.unlink()
