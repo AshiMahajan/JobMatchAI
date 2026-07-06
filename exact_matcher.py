@@ -1,6 +1,9 @@
 # exact_matcher.py
 
-def exact_match(resume_skills, jd_skills):
+def exact_match(
+    resume_skills: list[str],
+    jd_skills: list[str]
+):
 
     resume_set = set(
         skill.lower()
