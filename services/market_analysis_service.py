@@ -1,18 +1,28 @@
-from skill_extractor import extract_skills
+from services.skill_service import SkillService
+
 from ats_engine import calculate_ats_score
 
 
+skill_service = SkillService()
+
+
 def analyze_market(
-        resume_skills,
-        job_descriptions):
+    resume_skills: list[str],
+    job_descriptions: list[str]
+):
 
     analyses = []
 
-    for index, jd_text in enumerate(job_descriptions, start=1):
+    for index, jd_text in enumerate(
+        job_descriptions,
+        start=1
+    ):
 
-        jd_skills = extract_skills(jd_text)
+        jd_skills = skill_service.extract_names(
+            jd_text
+        )
 
-        result = calculate_ats_score(
+        ats_result = calculate_ats_score(
             resume_skills,
             jd_skills
         )
@@ -23,17 +33,24 @@ def analyze_market(
 
             "jd_skills": jd_skills,
 
-            "score": result["score"],
+            "score": ats_result["score"],
 
             "matched_skills":
-                result["exact_matches"]
-                + result["alias_matches"],
+
+                ats_result["exact_matches"]
+
+                +
+
+                ats_result["alias_matches"],
 
             "semantic_matches":
-                result["semantic_matches"],
+
+                ats_result["semantic_matches"],
 
             "missing_skills":
-                result["missing_skills"]
+
+                ats_result["missing_skills"]
+
         })
 
     return analyses
