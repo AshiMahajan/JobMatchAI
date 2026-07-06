@@ -1,57 +1,174 @@
-# Architecture Decisions
+# 🧠 Architecture Decisions
+
+This document records important architectural decisions made during the development of JobMatch AI.
 
 ---
 
-## ADR-001
+# ADR-001
 
-### Decision
+## Decision
 
-Use `skills.txt` for skill detection.
+Use `skills.txt` as the skill detection vocabulary.
 
-### Why
+## Why
 
-Detection vocabulary can grow to thousands of skills without making the Knowledge Base difficult to maintain.
+Skill detection should remain:
 
-### Alternative Considered
+- Fast
+- Deterministic
+- Lightweight
 
-Store all skills in `knowledge_base.json`.
+## Alternative Considered
 
-### Rejected Because
+Store every detectable skill inside `knowledge_base.json`.
 
-The Knowledge Base should represent enriched knowledge (aliases, categories, relationships), not every detectable skill.
+## Rejected Because
 
----
-
-## ADR-002
-
-### Decision
-
-Keep `/analyze` deterministic.
-
-### Why
-
-Fast, reproducible ATS scoring.
-
-### Alternative
-
-LLM-powered extraction for every request.
-
-### Rejected Because
-
-Higher latency, API cost, and non-deterministic results.
+The Knowledge Base should focus on skill intelligence rather than vocabulary.
 
 ---
 
-## ADR-003
+# ADR-002
 
-### Decision
+## Decision
 
-Introduce an offline Knowledge Evolution Engine.
+Separate Skill Detection from Skill Intelligence.
 
-### Why
+## Why
 
-Allow the vocabulary and Knowledge Base to evolve with the job market without affecting runtime performance.
+Detection and enrichment solve different problems.
 
-### Planned Implementation
+Detection answers:
 
-CrewAI + LLM periodically analyzes fresh job descriptions, proposes updates to `skills.txt`, and suggests enrichments for `knowledge_base.json`.
+> Which skills exist?
+
+Intelligence answers:
+
+> What do we know about those skills?
+
+---
+
+# ADR-003
+
+## Decision
+
+Introduce the Skill Service.
+
+## Why
+
+Every module should use a single skill pipeline.
+
+Benefits
+
+- Reduced duplicate code
+- Consistent normalization
+- Easier maintenance
+
+---
+
+# ADR-004
+
+## Decision
+
+Keep the ATS Engine deterministic.
+
+## Why
+
+ATS analysis should produce identical results for identical inputs.
+
+## Alternative Considered
+
+Use an LLM during runtime.
+
+## Rejected Because
+
+- Higher latency
+- Higher cost
+- Non-deterministic output
+- External dependency
+
+---
+
+# ADR-005
+
+## Decision
+
+Knowledge Evolution runs offline.
+
+## Why
+
+Runtime APIs should remain independent of AI services.
+
+CrewAI and LLMs will periodically:
+
+- Analyze fresh Job Descriptions
+- Discover emerging technologies
+- Suggest vocabulary updates
+- Suggest Knowledge Base enrichments
+
+---
+
+# ADR-006
+
+## Decision
+
+Separate runtime from learning.
+
+Runtime Responsibilities
+
+- ATS Analysis
+- Resume Parsing
+- Skill Extraction
+- Skill Intelligence
+
+Offline Responsibilities
+
+- Market Analysis
+- Vocabulary Expansion
+- Knowledge Base Evolution
+
+---
+
+# ADR-007
+
+## Decision
+
+Use a modular service architecture.
+
+Services
+
+- Resume Service
+- Skill Service
+- ATS Service
+- Market Analysis Service
+
+Benefits
+
+- Loose coupling
+- Easier testing
+- Better scalability
+- Clear responsibilities
+
+---
+
+# ADR-008
+
+## Decision
+
+JobMatch AI is a Career Intelligence Platform.
+
+## Why
+
+Traditional ATS tools only answer:
+
+> Does my resume match?
+
+JobMatch AI aims to answer:
+
+- Why?
+- What skills are missing?
+- What should I learn?
+- How is the market changing?
+- Which technologies are related?
+
+This vision guides all future architectural decisions.
