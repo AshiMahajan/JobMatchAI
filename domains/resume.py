@@ -2,9 +2,12 @@ from pydantic import BaseModel, Field
 
 
 class ResumeProfile(BaseModel):
+
     resume_text: str = ""
 
-    skills: list[str] = Field(default_factory=list)
+    skills: list[str] = Field(
+        default_factory=list
+    )
 
     sections: dict[str, list[str]] = Field(
         default_factory=dict
