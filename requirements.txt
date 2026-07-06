@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pydantic
+python-multipart
+
+spacy
+sentence-transformers
+torch
+
+pdfplumber
+python-docx
+
+numpy
+
+pytest
