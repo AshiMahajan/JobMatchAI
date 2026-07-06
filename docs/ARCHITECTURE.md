@@ -23,7 +23,7 @@ The architecture follows these principles:
 
 # High-Level Architecture
 
-![JobMatch AI Architecture](docs/images/architecture_overview.png)
+![JobMatch AI Architecture](images/architecture_overview.png)
 
 ---
 
