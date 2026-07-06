@@ -1,28 +1,57 @@
 import json
-import os
-from datetime import datetime
 
+from core.config import (
+    KNOWLEDGE_BASE_PATH
+)
+
+from core.logger import logger
 
 class SkillKnowledgeBase:
 
     def __init__(
             self,
-            path="data/skills/knowledge_base.json"
+            path=KNOWLEDGE_BASE_PATH
     ):
 
         self.path = path
 
-        with open(
-                path,
-                "r",
-                encoding="utf-8"
-        ) as f:
+        try:
 
-            self.skills = json.load(f)
+            with open(
+                    self.path,
+                    "r",
+                    encoding="utf-8"
+            ) as file:
 
-        # ------------------------
-        # Fast Lookup Indexes
-        # ------------------------
+                self.skills = json.load(
+                file
+)
+
+                logger.info(
+                    "Knowledge Base loaded (%d skills).",
+                    len(self.skills)
+)
+
+        except FileNotFoundError as error:
+
+            logger.error(
+                "Knowledge Base file not found: %s",
+                self.path
+            )
+
+            raise RuntimeError(
+                "Knowledge Base could not be loaded."
+            ) from error
+
+        except json.JSONDecodeError as error:
+
+            logger.error(
+                "Knowledge Base contains invalid JSON."
+            )
+
+            raise RuntimeError(
+                "Knowledge Base is corrupted."
+            ) from error
 
         self.skill_index = {}
 
@@ -42,34 +71,34 @@ class SkillKnowledgeBase:
                     alias.lower()
                 ] = canonical
 
-    # --------------------------
+    # ----------------------------------
 
     def get_skill(
             self,
-            canonical_name
-    ):
+            canonical_name: str
+    ) -> dict | None:
 
         return self.skill_index.get(
             canonical_name.lower()
         )
 
-    # --------------------------
+    # ----------------------------------
 
     def find_canonical_skill(
             self,
-            skill_name
-    ):
+            skill_name: str
+    ) -> str | None:
 
         return self.alias_index.get(
             skill_name.lower().strip()
         )
 
-    # --------------------------
+    # ----------------------------------
 
     def get_category(
             self,
-            canonical_name
-    ):
+            canonical_name: str
+    ) -> str | None:
 
         skill = self.get_skill(
             canonical_name
@@ -81,12 +110,12 @@ class SkillKnowledgeBase:
 
         return None
 
-    # --------------------------
+    # ----------------------------------
 
     def get_related_skills(
             self,
-            canonical_name
-    ):
+            canonical_name: str
+    ) -> list[str]:
 
         skill = self.get_skill(
             canonical_name
@@ -98,12 +127,12 @@ class SkillKnowledgeBase:
 
         return []
 
-    # --------------------------
+    # ----------------------------------
 
     def get_parent(
             self,
-            canonical_name
-    ):
+            canonical_name: str
+    ) -> str | None:
 
         skill = self.get_skill(
             canonical_name
@@ -115,73 +144,16 @@ class SkillKnowledgeBase:
 
         return None
 
-    # --------------------------
+    # ----------------------------------
 
-    def list_all_skills(self):
+    def list_all_skills(
+            self
+    ) -> list[str]:
 
         return sorted(
 
             skill["name"]
 
             for skill in self.skills
+
         )
-
-    # --------------------------
-
-    def record_unknown_skill(
-            self,
-            skill_name
-    ):
-
-        path = (
-            "data/skills/missing_skills.json"
-        )
-
-        if not os.path.exists(path):
-
-            with open(
-                    path,
-                    "w",
-                    encoding="utf-8"
-            ) as f:
-
-                json.dump({}, f)
-
-        with open(
-                path,
-                "r",
-                encoding="utf-8"
-        ) as f:
-
-            data = json.load(f)
-
-        now = datetime.utcnow().isoformat()
-
-        if skill_name not in data:
-
-            data[skill_name] = {
-
-                "count": 1,
-
-                "first_seen": now,
-
-                "last_seen": now
-            }
-
-        else:
-
-            data[skill_name]["count"] += 1
-
-            data[skill_name]["last_seen"] = now
-
-        with open(
-                path,
-                "w",
-                encoding="utf-8"
-        ) as f:
-
-            json.dump(
-                data,
-                f,
-                indent=4
-            )
