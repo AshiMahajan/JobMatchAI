@@ -3,11 +3,14 @@
 from aliases import SKILL_ALIASES
 
 
-def alias_match(resume_skills, jd_skills):
+def alias_match(
+    resume_skills: list[str],
+    jd_skills: list[str]
+):
 
     matches = []
 
-    matched_jd = set()
+    matched_jd_skills = set()
 
     for resume_skill in resume_skills:
 
@@ -35,8 +38,8 @@ def alias_match(resume_skills, jd_skills):
                     "jd_skill": jd_skill
                 })
 
-                matched_jd.add(
+                matched_jd_skills.add(
                     jd_skill.lower()
                 )
 
-    return matches, matched_jd
+    return matches, matched_jd_skills
