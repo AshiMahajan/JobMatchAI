@@ -1,7 +1,5 @@
 # section_parser.py
 
-import re
-
 SECTION_HEADERS = {
     "skills": [
         "skills",
@@ -32,19 +30,24 @@ SECTION_HEADERS = {
 }
 
 
-def identify_section(line):
+def identify_section(
+        line: str
+) -> str | None:
 
     clean = line.strip().lower()
 
     for section, headers in SECTION_HEADERS.items():
 
         if clean in headers:
+
             return section
 
     return None
 
 
-def extract_sections(text):
+def extract_sections(
+        text: str
+) -> dict[str, str]:
 
     sections = {}
 
@@ -54,19 +57,28 @@ def extract_sections(text):
 
     for line in text.splitlines():
 
-        section = identify_section(line)
+        section = identify_section(
+            line
+        )
 
         if section:
+
             current_section = section
 
             if current_section not in sections:
+
                 sections[current_section] = []
 
             continue
 
-        sections[current_section].append(line)
+        sections[current_section].append(
+            line
+        )
 
     return {
+
         key: "\n".join(value).strip()
+
         for key, value in sections.items()
+
     }
