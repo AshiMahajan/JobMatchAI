@@ -3,7 +3,9 @@ from skill_engine import SkillEngine
 engine = SkillEngine()
 
 
-def normalize_skills(skills):
+def normalize_skills(
+        skills: list[str]
+) -> list[str]:
 
     normalized = []
 
