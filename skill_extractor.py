@@ -1,32 +1,88 @@
 import spacy
+
 from spacy.matcher import PhraseMatcher
 
-nlp = spacy.load("en_core_web_sm")
+from core.config import (
+    SKILL_VOCABULARY_PATH,
+    SPACY_MODEL
+)
+
+from core.logger import logger
+
+
+# ---------------------------------------
+# Load spaCy model
+# ---------------------------------------
+
+try:
+
+    nlp = spacy.load(
+        SPACY_MODEL
+    )
+
+    logger.info(
+        "spaCy model loaded: %s",
+        SPACY_MODEL
+    )
+
+except OSError as error:
+
+    logger.error(
+        "spaCy model '%s' could not be loaded.",
+        SPACY_MODEL
+    )
+
+    raise RuntimeError(
+        "Required spaCy model is not installed."
+    ) from error
+
 
 matcher = PhraseMatcher(
     nlp.vocab,
     attr="LOWER"
 )
 
+
 # ---------------------------------------
 # Load Skill Vocabulary
 # ---------------------------------------
 
-with open(
-        "data/skills.txt",
-        "r",
-        encoding="utf-8"
-) as f:
+try:
 
-    skills = [
+    with open(
+            SKILL_VOCABULARY_PATH,
+            "r",
+            encoding="utf-8"
+    ) as file:
 
-        line.strip()
+        skills = [
 
-        for line in f
+            line.strip()
 
-        if line.strip()
+            for line in file
 
-    ]
+            if line.strip()
+
+            and not line.strip().startswith("#")
+
+        ]
+
+    logger.info(
+        "Skill vocabulary loaded (%d skills).",
+        len(skills)
+    )
+
+except FileNotFoundError as error:
+
+    logger.error(
+        "Skill vocabulary file not found: %s",
+        SKILL_VOCABULARY_PATH
+    )
+
+    raise RuntimeError(
+        "Skill vocabulary could not be loaded."
+    ) from error
+
 
 patterns = [
 
@@ -41,11 +97,14 @@ matcher.add(
     patterns
 )
 
+
 # ---------------------------------------
 # Skill Extraction
 # ---------------------------------------
 
-def extract_skills(text: str):
+def extract_skills(
+        text: str
+) -> list[str]:
 
     doc = nlp(text)
 
