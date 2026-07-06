@@ -4,17 +4,16 @@ from schemas import SkillRequest
 
 from skill_engine import SkillEngine
 
+
 router = APIRouter()
 
 engine = SkillEngine()
 
 
 @router.post("/skill/intelligence")
-def get_skill_intelligence(request: SkillRequest):
-
-    canonical = engine.normalize(
-        request.skill
-    )
+def skill_intelligence(
+        request: SkillRequest
+):
 
     info = engine.describe(
         request.skill
@@ -22,9 +21,9 @@ def get_skill_intelligence(request: SkillRequest):
 
     return {
 
-        "input": request.skill,
+        "query": request.skill,
 
-        "canonical": canonical,
+        "canonical": info["name"],
 
         "category": info["category"],
 
@@ -32,5 +31,8 @@ def get_skill_intelligence(request: SkillRequest):
 
         "aliases": info["aliases"],
 
-        "related": info["related"]
+        "related": info["related"],
+
+        "status": info["status"]
+
     }
