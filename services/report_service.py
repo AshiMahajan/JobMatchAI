@@ -1,14 +1,18 @@
 from domains.career_analysis import (
     CareerAnalysis,
-    JobAnalysis
+    JobAnalysis,
 )
 
 from domains.learning_priority import (
-    LearningPriority
+    LearningPriority,
+)
+
+from domains.learning_roadmap import (
+    LearningRoadmap,
 )
 
 from domains.skill_gap_analysis import (
-    SkillGapAnalysis
+    SkillGapAnalysis,
 )
 
 
@@ -18,8 +22,9 @@ class ReportService:
     CareerAnalysis domain model.
 
     This service performs no business logic.
-    It simply assembles the results produced
-    by other services.
+
+    It only assembles the results produced
+    by the individual analysis services.
     """
 
     def build_report(
@@ -27,7 +32,8 @@ class ReportService:
         analyses: list[JobAnalysis],
         average_ats_score: float,
         skill_gap_analysis: SkillGapAnalysis,
-        learning_priorities: list[LearningPriority]
+        learning_priorities: list[LearningPriority],
+        learning_roadmap: LearningRoadmap,
     ) -> CareerAnalysis:
         """
         Build the final CareerAnalysis report.
@@ -59,7 +65,11 @@ class ReportService:
                 learning_priorities
             ),
 
+            learning_roadmap=(
+                learning_roadmap
+            ),
+
             job_results=(
                 analyses
-            )
+            ),
         )
