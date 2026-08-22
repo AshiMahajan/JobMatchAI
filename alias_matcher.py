@@ -7,30 +7,68 @@ def alias_match(
     resume_skills: list[str],
     jd_skills: list[str]
 ):
+    """
+    Performs alias-based skill matching.
+
+    Example
+    -------
+    Resume:
+        JS
+
+    JD:
+        JavaScript
+
+    Returns
+    -------
+    tuple
+        (
+            alias_matches,
+            matched_jd_skills
+        )
+
+    alias_matches:
+        [
+            {
+                "resume_skill": "JS",
+                "jd_skill": "JavaScript"
+            }
+        ]
+
+    matched_jd_skills:
+        {
+            "javascript"
+        }
+    """
 
     matches = []
 
     matched_jd_skills = set()
 
-    for resume_skill in resume_skills:
+    # Normalize resume skills only once
+    normalized_resume_skills = [
+        (
+            resume_skill,
+            SKILL_ALIASES.get(
+                resume_skill.lower(),
+                resume_skill.lower()
+            )
+        )
+        for resume_skill in resume_skills
+    ]
 
-        normalized_resume = SKILL_ALIASES.get(
-            resume_skill.lower(),
-            resume_skill.lower()
+    # Preserve JD ordering
+    for jd_skill in jd_skills:
+
+        normalized_jd = SKILL_ALIASES.get(
+            jd_skill.lower(),
+            jd_skill.lower()
         )
 
-        for jd_skill in jd_skills:
-
-            normalized_jd = SKILL_ALIASES.get(
-                jd_skill.lower(),
-                jd_skill.lower()
-            )
+        for resume_skill, normalized_resume in normalized_resume_skills:
 
             if (
-                normalized_resume ==
-                normalized_jd
-                and
-                resume_skill.lower() != jd_skill.lower()
+                normalized_resume == normalized_jd
+                and resume_skill.lower() != jd_skill.lower()
             ):
 
                 matches.append({
@@ -41,5 +79,8 @@ def alias_match(
                 matched_jd_skills.add(
                     jd_skill.lower()
                 )
+
+                # One JD skill should only match once
+                break
 
     return matches, matched_jd_skills
