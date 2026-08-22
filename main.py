@@ -15,9 +15,7 @@ from services.resume_service import (
     extract_resume_skills,
 )
 
-from services.ats_service import (
-    analyze_resume_vs_jd,
-)
+from services.ats_service import ATSService
 
 from services.skill_service import (
     SkillService,
@@ -45,7 +43,7 @@ app = FastAPI(
 app.include_router(router)
 
 skill_service = SkillService()
-
+ats_service = ATSService()
 
 @app.get("/")
 def home() -> dict:
@@ -125,7 +123,7 @@ async def analyze_resume_jd(
             str(temp_path)
         )
 
-        result = analyze_resume_vs_jd(
+        result = ats_service.analyze_resume_vs_jd(
 
             resume.skills,
 
