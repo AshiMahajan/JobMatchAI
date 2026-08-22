@@ -1,7 +1,16 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class ATSResult(BaseModel):
+    """
+    Immutable domain model representing the result
+    of ATS analysis for a resume against a single
+    Job Description.
+    """
+
+    model_config = ConfigDict(
+        frozen=True
+    )
 
     score: float
 
