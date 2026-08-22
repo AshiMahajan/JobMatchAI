@@ -5,9 +5,8 @@ class LearningPriority(BaseModel):
     """
     Represents the learning priority of a missing skill.
 
-    The model contains both market-demand information
-    and dependency information so that learning
-    recommendations remain explainable.
+    Priority is determined by the Learning Priority Engine
+    using market demand, dependency impact, and readiness.
     """
 
     skill: str
@@ -25,5 +24,9 @@ class LearningPriority(BaseModel):
     missing_prerequisites: list[str] = Field(
         default_factory=list
     )
+
+    dependency_impact: int = 0
+
+    readiness: str = "ready"
 
     reason: str
