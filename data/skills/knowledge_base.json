@@ -8,7 +8,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "agentic_ai",
@@ -19,7 +21,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "agile",
@@ -30,7 +34,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "amazon_bedrock",
@@ -41,7 +47,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "amazon_web_services",
@@ -52,7 +60,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "anomaly_detection",
@@ -63,7 +73,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "ansible",
@@ -74,7 +86,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "apache_airflow",
@@ -85,7 +99,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "apache_kafka",
@@ -96,7 +112,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "apache_spark",
@@ -107,7 +125,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "api_development",
@@ -118,7 +138,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "api_gateway",
@@ -129,7 +151,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "artificial_intelligence",
@@ -140,7 +164,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "athena",
@@ -151,7 +177,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "aws",
@@ -162,7 +190,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "azure",
@@ -173,7 +203,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "bash",
@@ -184,7 +216,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "batch_inference",
@@ -195,7 +229,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "bert",
@@ -206,7 +242,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "c",
@@ -217,7 +255,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "c#",
@@ -228,7 +268,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "c++",
@@ -239,7 +281,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "catboost",
@@ -250,7 +294,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "chromadb",
@@ -261,7 +307,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "ci/cd",
@@ -272,7 +320,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "classification",
@@ -283,7 +333,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "claude_api",
@@ -294,7 +346,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "cloudwatch",
@@ -305,7 +359,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "clustering",
@@ -316,7 +372,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "computer_vision",
@@ -327,7 +385,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "crewai",
@@ -338,7 +398,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "css",
@@ -349,7 +411,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "data_analysis",
@@ -360,7 +424,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "data_cleaning",
@@ -371,7 +437,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "data_pipeline",
@@ -382,7 +450,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "data_preprocessing",
@@ -393,7 +463,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "data_science",
@@ -404,7 +476,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "data_visualization",
@@ -415,7 +489,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "databricks",
@@ -426,7 +502,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "dbt",
@@ -437,7 +515,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "decision_tree",
@@ -448,7 +528,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "deep_learning",
@@ -459,7 +541,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "dimensionality_reduction",
@@ -470,7 +554,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "django",
@@ -481,7 +567,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "docker",
@@ -492,7 +580,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": ["Linux"],
+        "unlocks": ["Kubernetes"]
     },
     {
         "id": "docker_compose",
@@ -503,7 +593,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "dynamodb",
@@ -514,7 +606,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "ec2",
@@ -525,7 +619,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "ecr",
@@ -536,7 +632,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "ecs",
@@ -547,7 +645,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "eks",
@@ -558,7 +658,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "embedding",
@@ -569,7 +671,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "embeddings",
@@ -580,7 +684,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "etl",
@@ -591,7 +697,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "excel",
@@ -602,7 +710,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "exploratory_data_analysis",
@@ -613,7 +723,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "express.js",
@@ -624,7 +736,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "faiss",
@@ -635,7 +749,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "fargate",
@@ -646,7 +762,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "fastapi",
@@ -657,7 +775,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "feature_engineering",
@@ -668,7 +788,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "feature_selection",
@@ -679,7 +801,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "flask",
@@ -690,7 +814,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "forecasting",
@@ -701,7 +827,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "fraud_detection",
@@ -712,7 +840,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "gcp",
@@ -723,7 +853,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "gemini_api",
@@ -734,7 +866,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "generative_ai",
@@ -745,7 +879,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "gensim",
@@ -756,7 +892,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "git",
@@ -767,7 +905,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "github",
@@ -778,7 +918,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "github_actions",
@@ -789,7 +931,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "gitlab_ci",
@@ -800,7 +944,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "glue",
@@ -811,7 +957,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "google_cloud",
@@ -822,7 +970,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "gpt",
@@ -833,7 +983,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "gradient_boosting",
@@ -844,7 +996,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "gradio",
@@ -855,7 +1009,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "html",
@@ -866,7 +1022,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "hugging_face",
@@ -877,7 +1035,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "iam",
@@ -888,7 +1048,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "image_classification",
@@ -899,7 +1061,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "image_segmentation",
@@ -910,7 +1074,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "inference",
@@ -921,7 +1087,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "java",
@@ -932,7 +1100,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "javascript",
@@ -943,7 +1113,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "jenkins",
@@ -954,7 +1126,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "jira",
@@ -965,7 +1139,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "k_nearest_neighbors",
@@ -976,7 +1152,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "k-means",
@@ -987,7 +1165,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "keras",
@@ -998,7 +1178,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "knn",
@@ -1009,7 +1191,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "kubernetes",
@@ -1019,8 +1203,10 @@
         ],
         "category": "Pending",
         "parent": null,
-        "related": [],
-        "status": "pending"
+        "related": ["Terraform"],
+        "status": "pending",
+        "prerequisites": ["Docker", "Linux"],
+        "unlocks": []
     },
     {
         "id": "lambda",
@@ -1031,7 +1217,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "langchain",
@@ -1042,7 +1230,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "langgraph",
@@ -1053,7 +1243,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "large_language_model",
@@ -1064,7 +1256,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "lemmatization",
@@ -1075,7 +1269,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "lightgbm",
@@ -1086,7 +1282,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "linear_regression",
@@ -1097,7 +1295,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "linux",
@@ -1108,7 +1308,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "litellm",
@@ -1119,7 +1321,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "llama",
@@ -1130,7 +1334,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "llm",
@@ -1141,7 +1347,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "logistic_regression",
@@ -1152,7 +1360,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "machine_learning",
@@ -1163,7 +1373,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "matplotlib",
@@ -1174,7 +1386,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "mcp",
@@ -1185,7 +1399,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "mistral",
@@ -1196,7 +1412,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "mlflow",
@@ -1207,7 +1425,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "mlops",
@@ -1218,7 +1438,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "mobilenet",
@@ -1229,7 +1451,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "model_context_protocol",
@@ -1240,7 +1464,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "model_deployment",
@@ -1251,7 +1477,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "model_monitoring",
@@ -1262,7 +1490,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "mongodb",
@@ -1273,7 +1503,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "multi_agent_systems",
@@ -1284,7 +1516,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "mysql",
@@ -1295,7 +1529,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "naive_bayes",
@@ -1306,7 +1542,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "named_entity_recognition",
@@ -1317,7 +1555,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "natural_language_processing",
@@ -1328,7 +1568,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "neo4j",
@@ -1339,7 +1581,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "nlp",
@@ -1350,7 +1594,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "nltk",
@@ -1361,7 +1607,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "node.js",
@@ -1372,7 +1620,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "numpy",
@@ -1383,7 +1633,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "object_detection",
@@ -1394,7 +1646,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "ocr",
@@ -1405,7 +1659,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "ollama",
@@ -1416,7 +1672,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "openai_api",
@@ -1427,7 +1685,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "opencv",
@@ -1438,7 +1698,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "pandas",
@@ -1449,7 +1711,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "pca",
@@ -1460,7 +1724,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "pinecone",
@@ -1471,7 +1737,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "plotly",
@@ -1482,7 +1750,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "postgresql",
@@ -1493,7 +1763,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "power_bi",
@@ -1504,7 +1776,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "predictive_analytics",
@@ -1515,7 +1789,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "prompt_engineering",
@@ -1526,7 +1802,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "pyspark",
@@ -1537,7 +1815,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "python",
@@ -1548,7 +1828,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "pytorch",
@@ -1559,7 +1841,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "rag",
@@ -1570,7 +1854,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "random_forest",
@@ -1581,7 +1867,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "rds",
@@ -1592,7 +1880,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "react",
@@ -1603,7 +1893,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "real_time_inference",
@@ -1614,7 +1906,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "recommendation_system",
@@ -1625,7 +1919,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "redis",
@@ -1636,7 +1932,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "redshift",
@@ -1647,7 +1945,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "regression",
@@ -1658,7 +1958,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "resnet",
@@ -1669,7 +1971,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "rest_api",
@@ -1680,7 +1984,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "retrieval_augmented_generation",
@@ -1691,7 +1997,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "roberta",
@@ -1702,7 +2010,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "s3",
@@ -1713,7 +2023,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "sagemaker",
@@ -1724,7 +2036,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "scikit-learn",
@@ -1735,7 +2049,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "scipy",
@@ -1746,7 +2062,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "scrum",
@@ -1757,7 +2075,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "seaborn",
@@ -1768,7 +2088,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "semantic_search",
@@ -1779,7 +2101,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "sentence_transformers",
@@ -1790,7 +2114,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "sentiment_analysis",
@@ -1801,7 +2127,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "shell_scripting",
@@ -1812,7 +2140,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "snowflake",
@@ -1823,7 +2153,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "snowpark",
@@ -1834,7 +2166,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "spacy",
@@ -1845,7 +2179,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "sql",
@@ -1856,7 +2192,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "sqlite",
@@ -1867,7 +2205,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "statsmodels",
@@ -1878,7 +2218,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "stemming",
@@ -1889,7 +2231,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "streamlit",
@@ -1900,7 +2244,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "support_vector_machine",
@@ -1911,7 +2257,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "svm",
@@ -1922,7 +2270,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "tableau",
@@ -1933,7 +2283,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "tensorflow",
@@ -1944,7 +2296,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "terraform",
@@ -1955,7 +2309,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "tesseract",
@@ -1966,7 +2322,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "text_classification",
@@ -1977,7 +2335,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "time_series_forecasting",
@@ -1988,7 +2348,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "tokenization",
@@ -1999,7 +2361,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "transfer_learning",
@@ -2010,7 +2374,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "transformers",
@@ -2021,7 +2387,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "typescript",
@@ -2032,7 +2400,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "vector_database",
@@ -2043,7 +2413,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "vector_store",
@@ -2054,7 +2426,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "vertex_ai",
@@ -2065,7 +2439,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "vllm",
@@ -2076,7 +2452,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "weaviate",
@@ -2087,7 +2465,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "word_embeddings",
@@ -2098,7 +2478,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "xgboost",
@@ -2109,7 +2491,9 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     },
     {
         "id": "yolo",
@@ -2120,6 +2504,8 @@
         "category": "Pending",
         "parent": null,
         "related": [],
-        "status": "pending"
+        "status": "pending",
+        "prerequisites": [],
+        "unlocks": []
     }
 ]
