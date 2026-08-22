@@ -4,6 +4,7 @@ from api.routes.resume import router as resume_router
 from api.routes.analysis import router as ats_router
 from api.routes.skills import router as skill_router
 from api.routes.market import router as market_router
+from api.routes.career import router as career_router
 
 router = APIRouter()
 
@@ -25,4 +26,9 @@ router.include_router(
 router.include_router(
     market_router,
     tags=["Market"]
+)
+
+router.include_router(
+    career_router,
+    tags=["Career"]
 )
