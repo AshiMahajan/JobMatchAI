@@ -1,5 +1,5 @@
-from domains.learning_priority import LearningPriority
 from domains.career_analysis import SkillFrequency
+from domains.learning_priority import LearningPriority
 
 from services.skill_dependency_service import (
     SkillDependencyService
@@ -10,18 +10,26 @@ class LearningPriorityService:
     """
     Generates dependency-aware learning priorities.
 
-    Learning order is determined using:
+    Priority considers:
 
-        1. Missing market skills
-        2. Skill prerequisites
-        3. Candidate's existing skills
-        4. Market demand
+        1. Dependency impact
+        2. Readiness
+        3. Market demand
 
-    Prerequisite relationships take precedence over
-    raw market demand.
+    The service does not use arbitrary numerical weights.
 
-    This prevents advanced skills from being recommended
-    before their missing foundations.
+    Skills are grouped into strategic tiers:
+
+        Tier 1:
+            Ready skills that unlock other missing skills.
+
+        Tier 2:
+            Ready standalone skills.
+
+        Tier 3:
+            Skills currently blocked by missing prerequisites.
+
+    Market demand determines ordering within each tier.
     """
 
     def __init__(self) -> None:
@@ -36,21 +44,7 @@ class LearningPriorityService:
         missing_skills: list[SkillFrequency]
     ) -> list[LearningPriority]:
         """
-        Generate an ordered learning priority list.
-
-        Parameters
-        ----------
-        resume_skills:
-            Skills already possessed by the candidate.
-
-        missing_skills:
-            Missing market skills produced by the
-            Career Intelligence Engine.
-
-        Returns
-        -------
-        list[LearningPriority]
-            Dependency-aware learning priorities.
+        Generate dependency-aware learning priorities.
         """
 
         if not missing_skills:
@@ -67,13 +61,20 @@ class LearningPriorityService:
             for item in missing_skills
         }
 
+        # --------------------------------------------------
+        # Resolve complete dependency graph
+        # --------------------------------------------------
+
         ordered_skills: list[str] = []
 
         visited: set[str] = set()
 
         visiting: set[str] = set()
 
-        # Highest-demand skills are considered first.
+        # Resolve all market skills.
+        #
+        # Market demand is used only to determine
+        # which branches of the graph are explored first.
         sorted_missing_skills = sorted(
             missing_skills,
             key=lambda item: (
@@ -93,15 +94,33 @@ class LearningPriorityService:
                 visiting=visiting
             )
 
-        priorities: list[LearningPriority] = []
+        # --------------------------------------------------
+        # Dependency impact
+        # --------------------------------------------------
 
-        for priority_number, skill_name in enumerate(
-            ordered_skills,
-            start=1
-        ):
+        dependency_impacts = (
+            self._calculate_dependency_impacts(
+                ordered_skills=ordered_skills,
+                resume_skill_set=resume_skill_set
+            )
+        )
 
-            market_data = market_skill_lookup.get(
+        # --------------------------------------------------
+        # Build candidate metadata
+        # --------------------------------------------------
+
+        candidates = []
+
+        for skill_name in ordered_skills:
+
+            normalized_skill = (
                 skill_name.lower()
+            )
+
+            market_data = (
+                market_skill_lookup.get(
+                    normalized_skill
+                )
             )
 
             dependency = (
@@ -111,7 +130,6 @@ class LearningPriorityService:
             )
 
             missing_prerequisites = [
-
                 prerequisite
 
                 for prerequisite
@@ -119,14 +137,132 @@ class LearningPriorityService:
 
                 if prerequisite.lower()
                 not in resume_skill_set
+            ]
 
+            readiness = (
+                "ready"
+                if not missing_prerequisites
+                else "blocked"
+            )
+
+            dependency_impact = (
+                dependency_impacts.get(
+                    normalized_skill,
+                    0
+                )
+            )
+
+            candidates.append({
+                "skill": skill_name,
+                "market_data": market_data,
+                "dependency": dependency,
+                "missing_prerequisites": (
+                    missing_prerequisites
+                ),
+                "readiness": readiness,
+                "dependency_impact": (
+                    dependency_impact
+                )
+            })
+
+        # --------------------------------------------------
+        # Strategic ranking
+        # --------------------------------------------------
+        #
+        # Tier 1:
+        #   Ready + unlocks missing skills
+        #
+        # Tier 2:
+        #   Ready standalone
+        #
+        # Tier 3:
+        #   Blocked
+        #
+        # Market demand is the secondary ordering signal.
+        # --------------------------------------------------
+
+        def ranking_key(candidate: dict):
+
+            readiness = candidate[
+                "readiness"
+            ]
+
+            dependency_impact = candidate[
+                "dependency_impact"
+            ]
+
+            market_data = candidate[
+                "market_data"
+            ]
+
+            if (
+                readiness == "ready"
+                and
+                dependency_impact > 0
+            ):
+
+                tier = 1
+
+            elif readiness == "ready":
+
+                tier = 2
+
+            else:
+
+                tier = 3
+
+            market_percentage = (
+                market_data.market_percentage
+                if market_data
+                else 0.0
+            )
+
+            return (
+                tier,
+                -dependency_impact,
+                -market_percentage,
+                candidate["skill"].lower()
+            )
+
+        candidates.sort(
+            key=ranking_key
+        )
+
+        # --------------------------------------------------
+        # Build final domain models
+        # --------------------------------------------------
+
+        priorities: list[LearningPriority] = []
+
+        for priority_number, candidate in enumerate(
+            candidates,
+            start=1
+        ):
+
+            market_data = candidate[
+                "market_data"
+            ]
+
+            dependency = candidate[
+                "dependency"
+            ]
+
+            missing_prerequisites = candidate[
+                "missing_prerequisites"
+            ]
+
+            readiness = candidate[
+                "readiness"
+            ]
+
+            dependency_impact = candidate[
+                "dependency_impact"
             ]
 
             priorities.append(
-
                 LearningPriority(
 
-                    skill=skill_name,
+                    skill=candidate["skill"],
 
                     priority=priority_number,
 
@@ -150,11 +286,25 @@ class LearningPriorityService:
                         missing_prerequisites
                     ),
 
+                    dependency_impact=(
+                        dependency_impact
+                    ),
+
+                    readiness=(
+                        readiness
+                    ),
+
                     reason=self._build_reason(
-                        skill_name=skill_name,
+                        skill_name=candidate["skill"],
                         market_data=market_data,
                         missing_prerequisites=(
                             missing_prerequisites
+                        ),
+                        dependency_impact=(
+                            dependency_impact
+                        ),
+                        readiness=(
+                            readiness
                         )
                     )
                 )
@@ -172,23 +322,24 @@ class LearningPriorityService:
         visiting: set[str]
     ) -> None:
         """
-        Recursively resolve prerequisites before placing
-        the requested skill in the learning roadmap.
+        Recursively resolve prerequisites.
+
+        Prerequisites are placed before the skill
+        that depends on them.
         """
 
-        normalized_skill = skill_name.lower()
+        normalized_skill = (
+            skill_name.lower()
+        )
 
-        # Candidate already knows the skill.
         if normalized_skill in resume_skill_set:
 
             return
 
-        # Already added to roadmap.
         if normalized_skill in visited:
 
             return
 
-        # Protect against malformed cyclic dependencies.
         if normalized_skill in visiting:
 
             return
@@ -209,7 +360,10 @@ class LearningPriorityService:
                 prerequisite.lower()
             )
 
-            if normalized_prerequisite in resume_skill_set:
+            if (
+                normalized_prerequisite
+                in resume_skill_set
+            ):
 
                 continue
 
@@ -234,18 +388,94 @@ class LearningPriorityService:
             skill_name
         )
 
+    def _calculate_dependency_impacts(
+        self,
+        ordered_skills: list[str],
+        resume_skill_set: set[str]
+    ) -> dict[str, int]:
+        """
+        Calculate how many relevant missing skills
+        directly depend on each skill.
+        """
+
+        ordered_skill_set = {
+            skill.lower()
+            for skill in ordered_skills
+        }
+
+        impacts: dict[str, int] = {
+            skill.lower(): 0
+            for skill in ordered_skills
+        }
+
+        for skill_name in ordered_skills:
+
+            dependency = (
+                self.dependency_service.get_dependency(
+                    skill_name
+                )
+            )
+
+            for prerequisite in dependency.prerequisites:
+
+                normalized_prerequisite = (
+                    prerequisite.lower()
+                )
+
+                if (
+                    normalized_prerequisite
+                    in ordered_skill_set
+                    and
+                    normalized_prerequisite
+                    not in resume_skill_set
+                ):
+
+                    impacts[
+                        normalized_prerequisite
+                    ] += 1
+
+        return impacts
+
     @staticmethod
     def _build_reason(
         skill_name: str,
         market_data: SkillFrequency | None,
-        missing_prerequisites: list[str]
+        missing_prerequisites: list[str],
+        dependency_impact: int,
+        readiness: str
     ) -> str:
         """
-        Build an explainable reason for the learning
-        recommendation.
+        Build an explainable recommendation reason.
         """
 
-        if market_data and missing_prerequisites:
+        market_percentage = (
+            market_data.market_percentage
+            if market_data
+            else 0.0
+        )
+
+        if (
+            readiness == "ready"
+            and
+            dependency_impact > 0
+        ):
+
+            dependent_label = (
+                "skill"
+                if dependency_impact == 1
+                else "skills"
+            )
+
+            return (
+                f"{skill_name} appears in "
+                f"{market_percentage}% of analyzed jobs "
+                f"and is ready to learn. "
+                f"It unlocks {dependency_impact} "
+                f"dependent {dependent_label} "
+                f"in the current learning path."
+            )
+
+        if missing_prerequisites:
 
             prerequisites = ", ".join(
                 missing_prerequisites
@@ -253,19 +483,13 @@ class LearningPriorityService:
 
             return (
                 f"{skill_name} appears in "
-                f"{market_data.market_percentage}% of analyzed jobs, "
-                f"but requires learning {prerequisites} first."
-            )
-
-        if market_data:
-
-            return (
-                f"{skill_name} appears in "
-                f"{market_data.market_percentage}% of analyzed jobs "
-                f"and has no unmet prerequisites."
+                f"{market_percentage}% of analyzed jobs, "
+                f"but requires learning "
+                f"{prerequisites} first."
             )
 
         return (
-            f"{skill_name} is recommended because it is a "
-            f"prerequisite for another in-demand skill."
+            f"{skill_name} appears in "
+            f"{market_percentage}% of analyzed jobs "
+            f"and has no unmet prerequisites."
         )
