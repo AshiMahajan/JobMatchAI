@@ -1,6 +1,7 @@
 from pydantic import BaseModel, ConfigDict, Field
 
 from domains.learning_priority import LearningPriority
+from domains.learning_roadmap import LearningRoadmap
 
 
 class SkillFrequency(BaseModel):
@@ -53,13 +54,6 @@ class JobAnalysis(BaseModel):
 class CareerAnalysis(BaseModel):
     """
     Complete Career Intelligence analysis.
-
-    Contains:
-        - Overall ATS performance
-        - Market skill demand
-        - Skill gaps
-        - Dependency-aware learning priorities
-        - Individual Job Description results
     """
 
     jobs_analyzed: int
@@ -79,6 +73,8 @@ class CareerAnalysis(BaseModel):
     learning_priorities: list[LearningPriority] = Field(
         default_factory=list
     )
+
+    learning_roadmap: LearningRoadmap
 
     job_results: list[JobAnalysis] = Field(
         default_factory=list
