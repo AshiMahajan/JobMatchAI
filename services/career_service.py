@@ -1,19 +1,23 @@
 from domains.career_analysis import CareerAnalysis
 
 from services.learning_priority_service import (
-    LearningPriorityService
+    LearningPriorityService,
+)
+
+from services.learning_roadmap_service import (
+    LearningRoadmapService,
 )
 
 from services.market_analysis_service import (
-    MarketAnalysisService
+    MarketAnalysisService,
 )
 
 from services.report_service import (
-    ReportService
+    ReportService,
 )
 
 from services.skill_gap_service import (
-    SkillGapService
+    SkillGapService,
 )
 
 
@@ -23,10 +27,11 @@ class CareerService:
     analysis pipeline.
 
     Responsibilities:
-        - Analyze multiple Job Descriptions
-        - Identify market skill gaps
-        - Generate dependency-aware learning priorities
-        - Generate the final Career Analysis report
+        - Analyze multiple Job Descriptions.
+        - Identify market skill gaps.
+        - Generate dependency-aware learning priorities.
+        - Generate a personalized learning roadmap.
+        - Generate the final Career Analysis report.
     """
 
     def __init__(self) -> None:
@@ -43,6 +48,10 @@ class CareerService:
             LearningPriorityService()
         )
 
+        self.learning_roadmap_service = (
+            LearningRoadmapService()
+        )
+
         self.report_service = (
             ReportService()
         )
@@ -50,7 +59,7 @@ class CareerService:
     def analyze_career(
         self,
         resume_skills: list[str],
-        job_descriptions: list[str]
+        job_descriptions: list[str],
     ) -> CareerAnalysis:
         """
         Execute the complete Career Intelligence
@@ -64,13 +73,9 @@ class CareerService:
         analyses = (
             self.market_analysis_service.analyze_jobs(
                 resume_skills,
-                job_descriptions
+                job_descriptions,
             )
         )
-
-        # ==================================================
-        # Average ATS Score
-        # ==================================================
 
         average_ats_score = (
             self.market_analysis_service.calculate_average_ats(
@@ -85,7 +90,7 @@ class CareerService:
         skill_gap_analysis = (
             self.skill_gap_service.analyze(
                 analyses,
-                resume_skills
+                resume_skills,
             )
         )
 
@@ -98,17 +103,28 @@ class CareerService:
                 resume_skills=resume_skills,
                 missing_skills=(
                     skill_gap_analysis.top_missing_skills
-                )
+                ),
             )
         )
 
         # ==================================================
-        # Final Career Report
+        # Learning Roadmap
+        # ==================================================
+
+        learning_roadmap = (
+            self.learning_roadmap_service.build_roadmap(
+                learning_priorities
+            )
+        )
+
+        # ==================================================
+        # Final Report
         # ==================================================
 
         return self.report_service.build_report(
             analyses=analyses,
             average_ats_score=average_ats_score,
             skill_gap_analysis=skill_gap_analysis,
-            learning_priorities=learning_priorities
+            learning_priorities=learning_priorities,
+            learning_roadmap=learning_roadmap,
         )
