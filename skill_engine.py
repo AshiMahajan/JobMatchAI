@@ -1,6 +1,5 @@
 from knowledge_base import SkillKnowledgeBase
 
-
 class SkillEngine:
 
     def __init__(self):
@@ -62,9 +61,13 @@ class SkillEngine:
 
             "related": [],
 
-            "status": "placeholder",
+            "status": "unknown",
 
-            "status":"unknown"
+            "learning": {
+
+                "objectives": []
+
+            }
 
         }
 
@@ -96,4 +99,33 @@ class SkillEngine:
 
         return self.kb.get_related_skills(
             canonical
+        )
+
+    # ----------------------------------
+
+    def get_learning_objectives(
+            self,
+            skill: str
+    ) -> list[str]:
+
+        canonical = self.normalize(
+            skill
+        )
+
+        info = self.kb.get_skill(
+            canonical
+        )
+
+        if not info:
+
+            return []
+
+        learning = info.get(
+            "learning",
+            {}
+        )
+
+        return learning.get(
+            "objectives",
+            []
         )

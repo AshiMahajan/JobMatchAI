@@ -6,12 +6,22 @@ from domains.learning_roadmap import (
     RoadmapStep,
 )
 
+from skill_engine import SkillEngine
+
 
 class LearningRoadmapService:
     """
     Builds a personalized learning roadmap from
     dependency-aware learning priorities.
     """
+
+    def __init__(self) -> None:
+
+        self.skill_engine = SkillEngine()
+
+    # ======================================================
+    # ROADMAP BUILDING
+    # ======================================================
 
     def build_roadmap(
         self,
@@ -57,8 +67,10 @@ class LearningRoadmapService:
 
         for priority in learning_priorities:
 
-            normalized_skill = (
-                priority.skill.lower()
+            objectives = (
+                self.skill_engine.get_learning_objectives(
+                    priority.skill
+                )
             )
 
             steps.append(
@@ -96,6 +108,8 @@ class LearningRoadmapService:
                     dependency_impact=(
                         priority.dependency_impact
                     ),
+
+                    objectives=objectives,
 
                     reason=priority.reason,
                 )
