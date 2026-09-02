@@ -6,6 +6,7 @@ from core.config import (
 
 from core.logger import logger
 
+
 class SkillKnowledgeBase:
 
     def __init__(
@@ -23,14 +24,12 @@ class SkillKnowledgeBase:
                     encoding="utf-8"
             ) as file:
 
-                self.skills = json.load(
-                file
-)
+                self.skills = json.load(file)
 
                 logger.info(
                     "Knowledge Base loaded (%d skills).",
                     len(self.skills)
-)
+                )
 
         except FileNotFoundError as error:
 
@@ -123,7 +122,10 @@ class SkillKnowledgeBase:
 
         if skill:
 
-            return skill["related"]
+            return skill.get(
+                "related",
+                []
+            )
 
         return []
 
@@ -140,7 +142,9 @@ class SkillKnowledgeBase:
 
         if skill:
 
-            return skill["parent"]
+            return skill.get(
+                "parent"
+            )
 
         return None
 
@@ -156,4 +160,46 @@ class SkillKnowledgeBase:
 
             for skill in self.skills
 
+        )
+
+    # ==================================
+    # PENDING SKILLS
+    # ==================================
+
+    def get_pending_skills(
+            self
+    ) -> list[dict]:
+        """
+        Return all skills that are currently
+        waiting for enrichment.
+        """
+
+        return [
+
+            skill
+
+            for skill in self.skills
+
+            if (
+                skill.get(
+                    "status",
+                    ""
+                ).lower()
+                == "pending"
+            )
+
+        ]
+
+    # ----------------------------------
+
+    def get_pending_skill_count(
+            self
+    ) -> int:
+        """
+        Return the number of skills that are
+        currently waiting for enrichment.
+        """
+
+        return len(
+            self.get_pending_skills()
         )
