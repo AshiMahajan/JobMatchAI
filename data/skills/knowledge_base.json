@@ -192,7 +192,17 @@
         "related": [],
         "status": "pending",
         "prerequisites": [],
-        "unlocks": []
+        "unlocks": [],
+        "learning": {
+    "objectives": [
+        "Understand core AWS cloud concepts",
+        "Understand IAM and access control",
+        "Work with compute services",
+        "Work with storage services",
+        "Understand AWS networking fundamentals",
+        "Monitor AWS workloads"
+       ]
+    }
     },
     {
         "id": "azure",
@@ -582,7 +592,17 @@
         "related": [],
         "status": "pending",
         "prerequisites": ["Linux"],
-        "unlocks": ["Kubernetes"]
+        "unlocks": ["Kubernetes"],
+        "learning": {
+        "objectives": [
+            "Understand containerization fundamentals",
+            "Build and manage Docker images",
+            "Write effective Dockerfiles",
+            "Run and manage containers",
+            "Understand Docker networking",
+            "Use Docker Compose"
+        ]
+    }
     },
     {
         "id": "docker_compose",
@@ -1206,7 +1226,17 @@
         "related": ["Terraform"],
         "status": "pending",
         "prerequisites": ["Docker", "Linux"],
-        "unlocks": []
+        "unlocks": [],
+        "learning": {
+    "objectives": [
+        "Understand Kubernetes architecture",
+        "Understand Pods and workloads",
+        "Deploy applications using Deployments",
+        "Work with Services and networking",
+        "Manage configuration and secrets",
+        "Understand Kubernetes scaling"
+        ]
+    }
     },
     {
         "id": "lambda",
