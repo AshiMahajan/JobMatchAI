@@ -28,7 +28,11 @@ class RoadmapStep(BaseModel):
         default_factory=list
     )
 
-    dependency_impact: int = 0
+    dependency_impact: int
+
+    objectives: list[str] = Field(
+        default_factory=list
+    )
 
     reason: str
 
