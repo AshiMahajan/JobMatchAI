@@ -32,4 +32,4 @@ class SkillEnrichmentProposal:
 
     confidence: float
 
-    status: str = "pending"
+    status: str = "pending_review"

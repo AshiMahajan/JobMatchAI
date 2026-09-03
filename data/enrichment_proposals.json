@@ -1,0 +1,26 @@
+[
+    {
+        "skill_id": "lightgbm",
+        "name": "LightGBM",
+        "aliases": [
+            "lightgbm",
+            "light gradient boosting machine"
+        ],
+        "category": "Machine Learning",
+        "parent": "Gradient Boosting",
+        "related": [
+            "XGBoost",
+            "CatBoost"
+        ],
+        "prerequisites": [
+            "Python",
+            "Machine Learning"
+        ],
+        "unlocks": [],
+        "sources": [
+            "https://lightgbm.readthedocs.io/"
+        ],
+        "confidence": 0.95,
+        "status": "approved"
+    }
+]

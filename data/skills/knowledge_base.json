@@ -194,15 +194,15 @@
         "prerequisites": [],
         "unlocks": [],
         "learning": {
-    "objectives": [
-        "Understand core AWS cloud concepts",
-        "Understand IAM and access control",
-        "Work with compute services",
-        "Work with storage services",
-        "Understand AWS networking fundamentals",
-        "Monitor AWS workloads"
-       ]
-    }
+            "objectives": [
+                "Understand core AWS cloud concepts",
+                "Understand IAM and access control",
+                "Work with compute services",
+                "Work with storage services",
+                "Understand AWS networking fundamentals",
+                "Monitor AWS workloads"
+            ]
+        }
     },
     {
         "id": "azure",
@@ -591,18 +591,22 @@
         "parent": null,
         "related": [],
         "status": "pending",
-        "prerequisites": ["Linux"],
-        "unlocks": ["Kubernetes"],
+        "prerequisites": [
+            "Linux"
+        ],
+        "unlocks": [
+            "Kubernetes"
+        ],
         "learning": {
-        "objectives": [
-            "Understand containerization fundamentals",
-            "Build and manage Docker images",
-            "Write effective Dockerfiles",
-            "Run and manage containers",
-            "Understand Docker networking",
-            "Use Docker Compose"
-        ]
-    }
+            "objectives": [
+                "Understand containerization fundamentals",
+                "Build and manage Docker images",
+                "Write effective Dockerfiles",
+                "Run and manage containers",
+                "Understand Docker networking",
+                "Use Docker Compose"
+            ]
+        }
     },
     {
         "id": "docker_compose",
@@ -1223,20 +1227,25 @@
         ],
         "category": "Pending",
         "parent": null,
-        "related": ["Terraform"],
+        "related": [
+            "Terraform"
+        ],
         "status": "pending",
-        "prerequisites": ["Docker", "Linux"],
+        "prerequisites": [
+            "Docker",
+            "Linux"
+        ],
         "unlocks": [],
         "learning": {
-    "objectives": [
-        "Understand Kubernetes architecture",
-        "Understand Pods and workloads",
-        "Deploy applications using Deployments",
-        "Work with Services and networking",
-        "Manage configuration and secrets",
-        "Understand Kubernetes scaling"
-        ]
-    }
+            "objectives": [
+                "Understand Kubernetes architecture",
+                "Understand Pods and workloads",
+                "Deploy applications using Deployments",
+                "Work with Services and networking",
+                "Manage configuration and secrets",
+                "Understand Kubernetes scaling"
+            ]
+        }
     },
     {
         "id": "lambda",
@@ -1307,13 +1316,20 @@
         "id": "lightgbm",
         "name": "LightGBM",
         "aliases": [
-            "lightgbm"
+            "lightgbm",
+            "light gradient boosting machine"
         ],
-        "category": "Pending",
-        "parent": null,
-        "related": [],
-        "status": "pending",
-        "prerequisites": [],
+        "category": "Machine Learning",
+        "parent": "Gradient Boosting",
+        "related": [
+            "XGBoost",
+            "CatBoost"
+        ],
+        "status": "curated",
+        "prerequisites": [
+            "Python",
+            "Machine Learning"
+        ],
         "unlocks": []
     },
     {
@@ -2518,11 +2534,17 @@
         "aliases": [
             "xgboost"
         ],
-        "category": "Pending",
+        "category": "Machine Learning",
         "parent": null,
-        "related": [],
-        "status": "pending",
-        "prerequisites": [],
+        "related": [
+            "LightGBM",
+            "TensorFlow"
+        ],
+        "status": "curated",
+        "prerequisites": [
+            "Python",
+            "Machine Learning"
+        ],
         "unlocks": []
     },
     {
