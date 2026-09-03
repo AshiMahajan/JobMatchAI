@@ -22,5 +22,29 @@
         ],
         "confidence": 0.95,
         "status": "approved"
+    },
+    {
+        "skill_id": "pytorch",
+        "name": "PyTorch",
+        "aliases": [
+            "pytorch",
+            "torch"
+        ],
+        "category": "Machine Learning",
+        "parent": null,
+        "related": [
+            "TensorFlow",
+            "JAX"
+        ],
+        "prerequisites": [
+            "Python",
+            "Machine Learning"
+        ],
+        "unlocks": [],
+        "sources": [
+            "https://pytorch.org/"
+        ],
+        "confidence": 0.95,
+        "status": "approved"
     }
 ]

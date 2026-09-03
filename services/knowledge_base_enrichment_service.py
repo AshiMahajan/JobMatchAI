@@ -1,29 +1,34 @@
 from domains.skill_enrichment import (
-    SkillEnrichmentProposal
+    SkillEnrichmentProposal,
 )
 
 from repositories.knowledge_base_repository import (
-    KnowledgeBaseRepository
+    KnowledgeBaseRepository,
 )
 
 
 class KnowledgeBaseEnrichmentService:
     """
-    Applies approved skill enrichment proposals
-    to the Knowledge Base.
+    Applies approved skill-enrichment proposals
+    to the Skill Knowledge Base.
 
-    Only proposals with status='approved' are allowed
-    to modify the Knowledge Base.
+    Business rule:
+    Only proposals with status='approved'
+    may modify the Knowledge Base.
     """
+
+    # ==================================================
+    # INITIALIZATION
+    # ==================================================
 
     def __init__(
         self,
-        knowledge_base_repository=None,
+        repository: KnowledgeBaseRepository | None = None,
     ):
 
-        self.knowledge_base_repository = (
-            knowledge_base_repository
-            if knowledge_base_repository is not None
+        self.repository = (
+            repository
+            if repository is not None
             else KnowledgeBaseRepository()
         )
 
@@ -36,8 +41,14 @@ class KnowledgeBaseEnrichmentService:
         proposal: SkillEnrichmentProposal,
     ) -> dict:
         """
-        Apply an approved enrichment proposal to
-        the existing Knowledge Base skill.
+        Apply an approved enrichment proposal
+        to the Knowledge Base.
+
+        Existing pending skill:
+            pending → curated
+
+        New skill:
+            added as curated
         """
 
         self._validate_approved_proposal(
@@ -45,19 +56,52 @@ class KnowledgeBaseEnrichmentService:
         )
 
         existing_skill = (
-            self.knowledge_base_repository.get_skill(
+            self.repository.get_skill(
                 proposal.skill_id
             )
         )
 
-        if existing_skill is None:
+        curated_skill = (
+            self._build_curated_skill(
+                proposal
+            )
+        )
 
-            raise ValueError(
-                f"Skill '{proposal.skill_id}' "
-                "does not exist in Knowledge Base."
+        # --------------------------------------------------
+        # Update existing skill
+        # --------------------------------------------------
+
+        if existing_skill is not None:
+
+            return self.repository.update_skill(
+
+                proposal.skill_id,
+
+                curated_skill,
             )
 
-        updated_skill = {
+        # --------------------------------------------------
+        # Add completely new skill
+        # --------------------------------------------------
+
+        return self.repository.add_skill(
+            curated_skill
+        )
+
+    # ==================================================
+    # BUILD CURATED SKILL
+    # ==================================================
+
+    @staticmethod
+    def _build_curated_skill(
+        proposal: SkillEnrichmentProposal,
+    ) -> dict:
+        """
+        Convert an approved enrichment proposal
+        into the canonical Knowledge Base format.
+        """
+
+        return {
 
             "id": proposal.skill_id,
 
@@ -80,13 +124,6 @@ class KnowledgeBaseEnrichmentService:
             "unlocks": proposal.unlocks,
         }
 
-        return (
-            self.knowledge_base_repository.update_skill(
-                skill_id=proposal.skill_id,
-                updated_skill=updated_skill,
-            )
-        )
-
     # ==================================================
     # VALIDATION
     # ==================================================
@@ -99,7 +136,7 @@ class KnowledgeBaseEnrichmentService:
         if proposal.status != "approved":
 
             raise ValueError(
-                "Only proposals with status "
-                "'approved' can be applied to "
-                "the Knowledge Base."
+                "Only approved enrichment "
+                "proposals can update the "
+                "Knowledge Base."
             )

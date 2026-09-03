@@ -1882,13 +1882,20 @@
         "id": "pytorch",
         "name": "PyTorch",
         "aliases": [
-            "pytorch"
+            "pytorch",
+            "torch"
         ],
-        "category": "Pending",
+        "category": "Machine Learning",
         "parent": null,
-        "related": [],
-        "status": "pending",
-        "prerequisites": [],
+        "related": [
+            "TensorFlow",
+            "JAX"
+        ],
+        "status": "curated",
+        "prerequisites": [
+            "Python",
+            "Machine Learning"
+        ],
         "unlocks": []
     },
     {

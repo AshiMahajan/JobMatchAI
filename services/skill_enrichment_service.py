@@ -6,6 +6,10 @@ from repositories.enrichment_proposal_repository import (
     EnrichmentProposalRepository
 )
 
+from services.knowledge_base_enrichment_service import (
+    KnowledgeBaseEnrichmentService
+)
+
 
 class SkillEnrichmentService:
     """
@@ -17,9 +21,7 @@ class SkillEnrichmentService:
     - Retrieve proposals awaiting review
     - Approve proposals
     - Reject proposals
-
-    The service contains business logic.
-    The repository handles persistence.
+    - Apply approved proposals to the Knowledge Base
     """
 
     # ==================================================
@@ -29,12 +31,21 @@ class SkillEnrichmentService:
     def __init__(
         self,
         repository: EnrichmentProposalRepository | None = None,
+        kb_enrichment_service: (
+            KnowledgeBaseEnrichmentService | None
+        ) = None,
     ):
 
         self.repository = (
             repository
             if repository is not None
             else EnrichmentProposalRepository()
+        )
+
+        self.kb_enrichment_service = (
+            kb_enrichment_service
+            if kb_enrichment_service is not None
+            else KnowledgeBaseEnrichmentService()
         )
 
     # ==================================================
@@ -54,12 +65,6 @@ class SkillEnrichmentService:
         sources: list[str],
         confidence: float,
     ) -> SkillEnrichmentProposal:
-        """
-        Create and persist a new enrichment proposal.
-
-        Every new proposal enters the
-        'pending_review' state.
-        """
 
         self._validate_confidence(
             confidence
@@ -102,7 +107,6 @@ class SkillEnrichmentService:
             status="pending_review",
         )
 
-        # Persist immediately
         self.repository.save(
             proposal
         )
@@ -117,10 +121,6 @@ class SkillEnrichmentService:
         self,
         research_result,
     ) -> SkillEnrichmentProposal:
-        """
-        Convert a research result into an enrichment
-        proposal and persist it.
-        """
 
         return self.create_proposal(
 
@@ -148,15 +148,12 @@ class SkillEnrichmentService:
         )
 
     # ==================================================
-    # GET PENDING PROPOSALS
+    # GET PENDING
     # ==================================================
 
     def get_pending_proposals(
         self,
     ) -> list[SkillEnrichmentProposal]:
-        """
-        Return all proposals awaiting human review.
-        """
 
         return self.repository.get_pending()
 
@@ -168,9 +165,6 @@ class SkillEnrichmentService:
         self,
         skill_id: str,
     ) -> SkillEnrichmentProposal | None:
-        """
-        Retrieve a proposal by skill ID.
-        """
 
         return self.repository.get(
             skill_id
@@ -184,10 +178,6 @@ class SkillEnrichmentService:
         self,
         proposal: SkillEnrichmentProposal,
     ) -> SkillEnrichmentProposal:
-        """
-        Approve a pending proposal and persist the
-        updated status.
-        """
 
         self._validate_pending_proposal(
             proposal
@@ -202,6 +192,29 @@ class SkillEnrichmentService:
         return proposal
 
     # ==================================================
+    # APPROVE + APPLY TO KNOWLEDGE BASE
+    # ==================================================
+
+    def approve_and_apply(
+        self,
+        proposal: SkillEnrichmentProposal,
+    ) -> dict:
+        """
+        Approve a proposal and immediately apply
+        the approved data to the Knowledge Base.
+
+        Returns the curated Knowledge Base record.
+        """
+
+        approved = self.approve_proposal(
+            proposal
+        )
+
+        return self.kb_enrichment_service.apply_proposal(
+            approved
+        )
+
+    # ==================================================
     # REJECT PROPOSAL
     # ==================================================
 
@@ -209,10 +222,6 @@ class SkillEnrichmentService:
         self,
         proposal: SkillEnrichmentProposal,
     ) -> SkillEnrichmentProposal:
-        """
-        Reject a pending proposal and persist the
-        updated status.
-        """
 
         self._validate_pending_proposal(
             proposal
