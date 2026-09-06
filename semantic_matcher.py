@@ -1,35 +1,10 @@
-from sentence_transformers import SentenceTransformer
 from sentence_transformers.util import cos_sim
 
 from core.config import (
-    SENTENCE_TRANSFORMER_MODEL,
     SEMANTIC_SIMILARITY_THRESHOLD
 )
 
-from core.logger import logger
-
-
-try:
-
-    embedding_model = SentenceTransformer(
-        SENTENCE_TRANSFORMER_MODEL
-    )
-
-    logger.info(
-        "Sentence Transformer loaded: %s",
-        SENTENCE_TRANSFORMER_MODEL
-    )
-
-except Exception as error:
-
-    logger.error(
-        "Failed to initialize Sentence Transformer: %s",
-        SENTENCE_TRANSFORMER_MODEL
-    )
-
-    raise RuntimeError(
-        "Embedding model could not be initialized."
-    ) from error
+from core.embedding import embedding_model
 
 
 def semantic_match(
@@ -84,6 +59,10 @@ def semantic_match(
                 best_resume_skill = resume_skill
 
         if (
+
+            best_resume_skill is not None
+
+            and
 
             best_score >= SEMANTIC_SIMILARITY_THRESHOLD
 
