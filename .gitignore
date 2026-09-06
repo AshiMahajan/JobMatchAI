@@ -70,3 +70,8 @@ build/
 *.pt
 *.pth
 *.ckpt
+
+# MISC
+
+testing.txt
+project_files.txt
