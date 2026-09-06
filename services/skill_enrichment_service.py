@@ -1,13 +1,17 @@
 from domains.skill_enrichment import (
-    SkillEnrichmentProposal
+    SkillEnrichmentProposal,
 )
 
 from repositories.enrichment_proposal_repository import (
-    EnrichmentProposalRepository
+    EnrichmentProposalRepository,
 )
 
 from services.knowledge_base_enrichment_service import (
-    KnowledgeBaseEnrichmentService
+    KnowledgeBaseEnrichmentService,
+)
+
+from agents.crews.skill_research_crew import (
+    SkillResearchCrew,
 )
 
 
@@ -16,12 +20,19 @@ class SkillEnrichmentService:
     Handles the lifecycle of skill enrichment proposals.
 
     Responsibilities:
-    - Create proposals
+
+    - Check whether a skill exists in the Knowledge Base
+    - Determine whether the existing skill is curated
+    - Generate IDs for newly discovered skills
+    - Research unknown or pending technical skills
+    - Create enrichment proposals
     - Persist proposals
     - Retrieve proposals awaiting review
     - Approve proposals
     - Reject proposals
     - Apply approved proposals to the Knowledge Base
+
+    Research never directly modifies the Knowledge Base.
     """
 
     # ==================================================
@@ -48,6 +59,10 @@ class SkillEnrichmentService:
             else KnowledgeBaseEnrichmentService()
         )
 
+        self.research_crew = (
+            SkillResearchCrew()
+        )
+
     # ==================================================
     # CREATE PROPOSAL
     # ==================================================
@@ -65,14 +80,12 @@ class SkillEnrichmentService:
         sources: list[str],
         confidence: float,
     ) -> SkillEnrichmentProposal:
+        """
+        Create and persist a new enrichment proposal.
 
-        self._validate_confidence(
-            confidence
-        )
-
-        self._validate_sources(
-            sources
-        )
+        Every new proposal starts with:
+        pending_review
+        """
 
         self._validate_skill_id(
             skill_id
@@ -80,6 +93,14 @@ class SkillEnrichmentService:
 
         self._validate_name(
             name
+        )
+
+        self._validate_confidence(
+            confidence
+        )
+
+        self._validate_sources(
+            sources
         )
 
         proposal = SkillEnrichmentProposal(
@@ -114,13 +135,19 @@ class SkillEnrichmentService:
         return proposal
 
     # ==================================================
-    # CREATE FROM RESEARCH
+    # CREATE PROPOSAL FROM RESEARCH
     # ==================================================
 
     def create_proposal_from_research(
         self,
         research_result,
     ) -> SkillEnrichmentProposal:
+        """
+        Convert a SkillResearchResult into an enrichment
+        proposal and persist it.
+
+        The Knowledge Base is not modified here.
+        """
 
         return self.create_proposal(
 
@@ -136,9 +163,7 @@ class SkillEnrichmentService:
 
             related=research_result.related,
 
-            prerequisites=(
-                research_result.prerequisites
-            ),
+            prerequisites=research_result.prerequisites,
 
             unlocks=research_result.unlocks,
 
@@ -148,14 +173,181 @@ class SkillEnrichmentService:
         )
 
     # ==================================================
-    # GET PENDING
+    # RESEARCH SKILL
+    # ==================================================
+
+    def research_skill(
+        self,
+        skill_name: str,
+    ):
+        """
+        Research a technical skill.
+
+        Flow:
+
+            skill name
+                ↓
+            check Knowledge Base
+                ↓
+            curated skill exists
+                → return existing skill
+                ↓
+            unknown / pending skill
+                ↓
+            perform fresh web research
+                ↓
+            synthesize enrichment
+                ↓
+            create pending_review proposal
+                ↓
+            return proposal
+
+        Research never directly modifies the Knowledge Base.
+        """
+
+        self._validate_name(
+            skill_name
+        )
+
+        skill_name = skill_name.strip()
+
+        # --------------------------------------------------
+        # CHECK KNOWLEDGE BASE
+        # --------------------------------------------------
+
+        existing_skill = (
+            self.kb_enrichment_service
+            .repository
+            .get_skill_by_name(
+                skill_name
+            )
+        )
+
+        # --------------------------------------------------
+        # EXISTING CURATED SKILL
+        # --------------------------------------------------
+
+        if existing_skill is not None:
+
+            status = existing_skill.get(
+                "status"
+            )
+
+            if status == "curated":
+
+                return existing_skill
+
+        # --------------------------------------------------
+        # GENERATE SKILL ID
+        # --------------------------------------------------
+
+        skill_id = (
+            self._generate_skill_id(
+                skill_name
+            )
+        )
+
+        # --------------------------------------------------
+        # ALWAYS PERFORM FRESH RESEARCH
+        # --------------------------------------------------
+        #
+        # IMPORTANT:
+        #
+        # We intentionally do NOT return an existing
+        # pending proposal here.
+        #
+        # This endpoint is a research endpoint.
+        # Calling it again should perform fresh research
+        # so poor/old proposals can be regenerated.
+        #
+        # The repository's save/update behavior determines
+        # how duplicate proposals are handled.
+        #
+        # --------------------------------------------------
+
+        research_result = (
+            self.research_crew.research(
+                skill_name=skill_name,
+                skill_id=skill_id,
+            )
+        )
+
+        # --------------------------------------------------
+        # CREATE ENRICHMENT PROPOSAL
+        # --------------------------------------------------
+
+        proposal = (
+            self.create_proposal_from_research(
+                research_result
+            )
+        )
+
+        return proposal
+
+    # ==================================================
+    # GENERATE SKILL ID
+    # ==================================================
+
+    @staticmethod
+    def _generate_skill_id(
+        skill_name: str,
+    ) -> str:
+        """
+        Generate a deterministic normalized skill ID.
+
+        Examples:
+
+            LightGBM
+            -> lightgbm
+
+            Real Time Inference
+            -> real_time_inference
+
+            Machine Learning
+            -> machine_learning
+
+            React.js
+            -> react_js
+        """
+
+        normalized = (
+            skill_name
+            .strip()
+            .lower()
+        )
+
+        normalized = "".join(
+
+            character
+            if character.isalnum()
+            else " "
+
+            for character in normalized
+        )
+
+        skill_id = "_".join(
+            normalized.split()
+        )
+
+        if not skill_id:
+
+            raise ValueError(
+                "Unable to generate a valid skill ID."
+            )
+
+        return skill_id
+
+    # ==================================================
+    # GET PENDING PROPOSALS
     # ==================================================
 
     def get_pending_proposals(
         self,
     ) -> list[SkillEnrichmentProposal]:
 
-        return self.repository.get_pending()
+        return (
+            self.repository.get_pending()
+        )
 
     # ==================================================
     # GET PROPOSAL
@@ -165,6 +357,10 @@ class SkillEnrichmentService:
         self,
         skill_id: str,
     ) -> SkillEnrichmentProposal | None:
+
+        self._validate_skill_id(
+            skill_id
+        )
 
         return self.repository.get(
             skill_id
@@ -192,26 +388,25 @@ class SkillEnrichmentService:
         return proposal
 
     # ==================================================
-    # APPROVE + APPLY TO KNOWLEDGE BASE
+    # APPROVE + APPLY
     # ==================================================
 
     def approve_and_apply(
         self,
         proposal: SkillEnrichmentProposal,
     ) -> dict:
-        """
-        Approve a proposal and immediately apply
-        the approved data to the Knowledge Base.
 
-        Returns the curated Knowledge Base record.
-        """
-
-        approved = self.approve_proposal(
-            proposal
+        approved = (
+            self.approve_proposal(
+                proposal
+            )
         )
 
-        return self.kb_enrichment_service.apply_proposal(
-            approved
+        return (
+            self.kb_enrichment_service
+            .apply_proposal(
+                approved
+            )
         )
 
     # ==================================================
@@ -246,7 +441,7 @@ class SkillEnrichmentService:
 
         if not isinstance(
             confidence,
-            (int, float)
+            (int, float),
         ):
 
             raise ValueError(
@@ -275,8 +470,13 @@ class SkillEnrichmentService:
             )
 
         if not all(
-            isinstance(source, str)
+
+            isinstance(
+                source,
+                str,
+            )
             and source.strip()
+
             for source in sources
         ):
 
@@ -294,7 +494,7 @@ class SkillEnrichmentService:
 
         if not isinstance(
             skill_id,
-            str
+            str,
         ) or not skill_id.strip():
 
             raise ValueError(
@@ -311,7 +511,7 @@ class SkillEnrichmentService:
 
         if not isinstance(
             name,
-            str
+            str,
         ) or not name.strip():
 
             raise ValueError(
