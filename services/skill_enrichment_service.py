@@ -370,44 +370,50 @@ class SkillEnrichmentService:
     # APPROVE PROPOSAL
     # ==================================================
 
+    # ==================================================
+# APPROVE PROPOSAL
+# ==================================================
+
     def approve_proposal(
         self,
         proposal: SkillEnrichmentProposal,
     ) -> SkillEnrichmentProposal:
-
+    
         self._validate_pending_proposal(
             proposal
         )
-
+    
         proposal.status = "approved"
-
-        self.repository.update(
+    
+        # Apply to Knowledge Base first.
+        self.kb_enrichment_service.apply_proposal(
             proposal
         )
-
+    
+        # Only archive after successful KB application.
+        self.repository.archive_approved(
+            proposal
+        )
+    
         return proposal
+
 
     # ==================================================
     # APPROVE + APPLY
     # ==================================================
 
-    def approve_and_apply(
-        self,
-        proposal: SkillEnrichmentProposal,
-    ) -> dict:
+    # def approve_and_apply(
+    #     self,
+    #     proposal: SkillEnrichmentProposal,
+    # ) -> dict:
 
-        approved = (
-            self.approve_proposal(
-                proposal
-            )
-        )
+    #     approved = self.approve_proposal(
+    #         proposal
+    #     )
 
-        return (
-            self.kb_enrichment_service
-            .apply_proposal(
-                approved
-            )
-        )
+    #     return self.kb_enrichment_service.repository.get_skill(
+    #         approved.skill_id
+    #     )
 
     # ==================================================
     # REJECT PROPOSAL
@@ -422,14 +428,10 @@ class SkillEnrichmentService:
             proposal
         )
 
-        proposal.status = "rejected"
-
-        self.repository.update(
+        return self.repository.reject(
             proposal
         )
-
-        return proposal
-
+    
     # ==================================================
     # VALIDATION
     # ==================================================
@@ -533,3 +535,18 @@ class SkillEnrichmentService:
                 "'pending_review' can be approved "
                 "or rejected."
             )
+    
+    # ==================================================
+    # RESTORE REJECTED PROPOSAL
+    # ==================================================
+
+    def restore_rejected(
+        self,
+        skill_id: str,
+    ) -> SkillEnrichmentProposal:
+
+        return (
+            self.repository.restore_rejected(
+                skill_id
+            )
+        )
