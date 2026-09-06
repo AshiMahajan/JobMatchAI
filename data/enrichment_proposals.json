@@ -1,50 +1,35 @@
 [
     {
-        "skill_id": "lightgbm",
-        "name": "LightGBM",
+        "skill_id": "numpy",
+        "name": "NumPy",
         "aliases": [
-            "lightgbm",
-            "light gradient boosting machine"
+            "Numerical Python",
+            "np"
         ],
-        "category": "Machine Learning",
-        "parent": "Gradient Boosting",
+        "category": "Library",
+        "parent": "Python",
         "related": [
-            "XGBoost",
-            "CatBoost"
+            "SciPy",
+            "Pandas",
+            "Matplotlib",
+            "Scikit-learn"
         ],
         "prerequisites": [
-            "Python",
-            "Machine Learning"
+            "Python programming language"
         ],
-        "unlocks": [],
+        "unlocks": [
+            "Data analysis",
+            "Scientific computing",
+            "Machine learning",
+            "Numerical simulations"
+        ],
         "sources": [
-            "https://lightgbm.readthedocs.io/"
+            "https://numpy.org/",
+            "https://www.w3schools.com/python/numpy/numpy_intro.asp",
+            "https://github.com/numpy/numpy",
+            "https://en.wikipedia.org/wiki/NumPy"
         ],
-        "confidence": 0.95,
-        "status": "approved"
-    },
-    {
-        "skill_id": "pytorch",
-        "name": "PyTorch",
-        "aliases": [
-            "pytorch",
-            "torch"
-        ],
-        "category": "Machine Learning",
-        "parent": null,
-        "related": [
-            "TensorFlow",
-            "JAX"
-        ],
-        "prerequisites": [
-            "Python",
-            "Machine Learning"
-        ],
-        "unlocks": [],
-        "sources": [
-            "https://pytorch.org/"
-        ],
-        "confidence": 0.95,
-        "status": "approved"
+        "confidence": 0.9,
+        "status": "pending_review"
     }
 ]
