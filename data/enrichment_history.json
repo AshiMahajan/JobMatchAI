@@ -1,0 +1,404 @@
+[
+    {
+        "skill_id": "aws",
+        "name": "Amazon Web Services",
+        "aliases": [
+            "AWS"
+        ],
+        "category": "Cloud Computing",
+        "parent": null,
+        "related": [
+            "AWS Cloud Development Kit (CDK)",
+            "AWS Software Development Kit (SDK)",
+            "Cloud Native Applications",
+            "CI/CD Pipelines",
+            "Dependency Management"
+        ],
+        "prerequisites": [
+            "Basic understanding of cloud computing concepts",
+            "Familiarity with programming languages (e.g., Python, Java, JavaScript)",
+            "Knowledge of networking and security principles"
+        ],
+        "unlocks": [
+            "Cloud application development",
+            "Serverless architecture",
+            "Data storage solutions",
+            "Machine learning services",
+            "DevOps practices"
+        ],
+        "sources": [
+            "https://aws.amazon.com/cdk/",
+            "https://aws.amazon.com/what-is/framework/",
+            "https://aws.amazon.com/what-is/cloud-native/",
+            "https://www.practicallogix.com/inside-the-aws-software-development-kit-tools-languages-and-capabilities/",
+            "https://aws.amazon.com/blogs/training-and-certification/steps-to-start-your-aws-certification-journey/"
+        ],
+        "confidence": 0.9,
+        "status": "rejected",
+        "rejected_at": "2026-09-06T18:28:56.714450+00:00",
+        "action": "rejected",
+        "recorded_at": "2026-09-06T18:28:56.773569+00:00"
+    },
+    {
+        "skill_id": "aws",
+        "name": "Amazon Web Services",
+        "aliases": [
+            "AWS"
+        ],
+        "category": "Cloud Computing",
+        "parent": null,
+        "related": [
+            "AWS Cloud Development Kit (CDK)",
+            "AWS Software Development Kit (SDK)",
+            "Cloud Native Applications",
+            "CI/CD Pipelines",
+            "Dependency Management"
+        ],
+        "prerequisites": [
+            "Basic understanding of cloud computing concepts",
+            "Familiarity with programming languages (e.g., Python, Java, JavaScript)",
+            "Knowledge of networking and security principles"
+        ],
+        "unlocks": [
+            "Cloud application development",
+            "Serverless architecture",
+            "Data storage solutions",
+            "Machine learning services",
+            "DevOps practices"
+        ],
+        "sources": [
+            "https://aws.amazon.com/cdk/",
+            "https://aws.amazon.com/what-is/framework/",
+            "https://aws.amazon.com/what-is/cloud-native/",
+            "https://www.practicallogix.com/inside-the-aws-software-development-kit-tools-languages-and-capabilities/",
+            "https://aws.amazon.com/blogs/training-and-certification/steps-to-start-your-aws-certification-journey/"
+        ],
+        "confidence": 0.9,
+        "status": "pending_review",
+        "action": "restored",
+        "recorded_at": "2026-09-06T18:35:44.918599+00:00"
+    },
+    {
+        "skill_id": "aws",
+        "name": "Amazon Web Services",
+        "aliases": [
+            "AWS"
+        ],
+        "category": "Cloud Computing",
+        "parent": null,
+        "related": [
+            "AWS Cloud Development Kit (CDK)",
+            "AWS Software Development Kit (SDK)",
+            "Cloud Native Applications",
+            "CI/CD Pipelines",
+            "Dependency Management"
+        ],
+        "prerequisites": [
+            "Basic understanding of cloud computing concepts",
+            "Familiarity with programming languages (e.g., Python, Java, JavaScript)",
+            "Knowledge of networking and security principles"
+        ],
+        "unlocks": [
+            "Cloud application development",
+            "Serverless architecture",
+            "Data storage solutions",
+            "Machine learning services",
+            "DevOps practices"
+        ],
+        "sources": [
+            "https://aws.amazon.com/cdk/",
+            "https://aws.amazon.com/what-is/framework/",
+            "https://aws.amazon.com/what-is/cloud-native/",
+            "https://www.practicallogix.com/inside-the-aws-software-development-kit-tools-languages-and-capabilities/",
+            "https://aws.amazon.com/blogs/training-and-certification/steps-to-start-your-aws-certification-journey/"
+        ],
+        "confidence": 0.9,
+        "status": "rejected",
+        "rejected_at": "2026-09-06T18:36:30.498399+00:00",
+        "action": "rejected",
+        "recorded_at": "2026-09-06T18:36:30.507165+00:00"
+    },
+    {
+        "skill_id": "aws",
+        "name": "Amazon Web Services",
+        "aliases": [
+            "AWS"
+        ],
+        "category": "Cloud Computing",
+        "parent": null,
+        "related": [
+            "AWS Cloud Development Kit (CDK)",
+            "AWS Software Development Kit (SDK)",
+            "Cloud Native Applications",
+            "CI/CD Pipelines",
+            "Dependency Management"
+        ],
+        "prerequisites": [
+            "Basic understanding of cloud computing concepts",
+            "Familiarity with programming languages (e.g., Python, Java, JavaScript)",
+            "Knowledge of networking and security principles"
+        ],
+        "unlocks": [
+            "Cloud application development",
+            "Serverless architecture",
+            "Data storage solutions",
+            "Machine learning services",
+            "DevOps practices"
+        ],
+        "sources": [
+            "https://aws.amazon.com/cdk/",
+            "https://aws.amazon.com/what-is/framework/",
+            "https://aws.amazon.com/what-is/cloud-native/",
+            "https://www.practicallogix.com/inside-the-aws-software-development-kit-tools-languages-and-capabilities/",
+            "https://aws.amazon.com/blogs/training-and-certification/steps-to-start-your-aws-certification-journey/"
+        ],
+        "confidence": 0.9,
+        "status": "pending_review",
+        "action": "restored",
+        "recorded_at": "2026-09-06T18:40:27.154677+00:00"
+    },
+    {
+        "skill_id": "aws",
+        "name": "Amazon Web Services",
+        "aliases": [
+            "AWS"
+        ],
+        "category": "Cloud Computing",
+        "parent": null,
+        "related": [
+            "AWS Cloud Development Kit (CDK)",
+            "AWS Software Development Kit (SDK)",
+            "Cloud Native Applications",
+            "CI/CD Pipelines",
+            "Dependency Management"
+        ],
+        "prerequisites": [
+            "Basic understanding of cloud computing concepts",
+            "Familiarity with programming languages (e.g., Python, Java, JavaScript)",
+            "Knowledge of networking and security principles"
+        ],
+        "unlocks": [
+            "Cloud application development",
+            "Serverless architecture",
+            "Data storage solutions",
+            "Machine learning services",
+            "DevOps practices"
+        ],
+        "sources": [
+            "https://aws.amazon.com/cdk/",
+            "https://aws.amazon.com/what-is/framework/",
+            "https://aws.amazon.com/what-is/cloud-native/",
+            "https://www.practicallogix.com/inside-the-aws-software-development-kit-tools-languages-and-capabilities/",
+            "https://aws.amazon.com/blogs/training-and-certification/steps-to-start-your-aws-certification-journey/"
+        ],
+        "confidence": 0.9,
+        "status": "rejected",
+        "rejected_at": "2026-09-06T18:56:33.147154+00:00",
+        "action": "rejected",
+        "recorded_at": "2026-09-06T18:56:33.170427+00:00"
+    },
+    {
+        "skill_id": "aws",
+        "name": "Amazon Web Services",
+        "aliases": [
+            "AWS"
+        ],
+        "category": "Cloud Computing",
+        "parent": null,
+        "related": [
+            "AWS Cloud Development Kit (CDK)",
+            "AWS Software Development Kit (SDK)",
+            "Cloud Native Applications",
+            "CI/CD Pipelines",
+            "Dependency Management"
+        ],
+        "prerequisites": [
+            "Basic understanding of cloud computing concepts",
+            "Familiarity with programming languages (e.g., Python, Java, JavaScript)",
+            "Knowledge of networking and security principles"
+        ],
+        "unlocks": [
+            "Cloud application development",
+            "Serverless architecture",
+            "Data storage solutions",
+            "Machine learning services",
+            "DevOps practices"
+        ],
+        "sources": [
+            "https://aws.amazon.com/cdk/",
+            "https://aws.amazon.com/what-is/framework/",
+            "https://aws.amazon.com/what-is/cloud-native/",
+            "https://www.practicallogix.com/inside-the-aws-software-development-kit-tools-languages-and-capabilities/",
+            "https://aws.amazon.com/blogs/training-and-certification/steps-to-start-your-aws-certification-journey/"
+        ],
+        "confidence": 0.9,
+        "status": "pending_review",
+        "action": "restored",
+        "recorded_at": "2026-09-06T18:56:41.270299+00:00"
+    },
+    {
+        "skill_id": "aws",
+        "name": "Amazon Web Services",
+        "aliases": [
+            "AWS"
+        ],
+        "category": "Cloud Computing",
+        "parent": null,
+        "related": [
+            "AWS Cloud Development Kit (CDK)",
+            "AWS Software Development Kit (SDK)",
+            "Cloud Native Applications",
+            "CI/CD Pipelines",
+            "Dependency Management"
+        ],
+        "prerequisites": [
+            "Basic understanding of cloud computing concepts",
+            "Familiarity with programming languages (e.g., Python, Java, JavaScript)",
+            "Knowledge of networking and security principles"
+        ],
+        "unlocks": [
+            "Cloud application development",
+            "Serverless architecture",
+            "Data storage solutions",
+            "Machine learning services",
+            "DevOps practices"
+        ],
+        "sources": [
+            "https://aws.amazon.com/cdk/",
+            "https://aws.amazon.com/what-is/framework/",
+            "https://aws.amazon.com/what-is/cloud-native/",
+            "https://www.practicallogix.com/inside-the-aws-software-development-kit-tools-languages-and-capabilities/",
+            "https://aws.amazon.com/blogs/training-and-certification/steps-to-start-your-aws-certification-journey/"
+        ],
+        "confidence": 0.9,
+        "status": "approved",
+        "applied_at": "2026-09-06T18:56:45.747666+00:00",
+        "action": "approved_and_applied",
+        "recorded_at": "2026-09-06T18:56:45.748125+00:00"
+    },
+    {
+        "skill_id": "neo4j",
+        "name": "Neo4j",
+        "aliases": [
+            "Neo4j Graph Database",
+            "Neo4j DBMS"
+        ],
+        "category": "Database",
+        "parent": null,
+        "related": [
+            "Cypher",
+            "Java",
+            "JavaScript",
+            ".NET",
+            "Python",
+            "Go",
+            "GraphQL",
+            "Spring"
+        ],
+        "prerequisites": [
+            "Java Virtual Machine (JVM)",
+            "Basic understanding of graph databases",
+            "Familiarity with Cypher query language"
+        ],
+        "unlocks": [
+            "Graph data modeling",
+            "Advanced data analytics",
+            "Graph-based application development"
+        ],
+        "sources": [
+            "https://neo4j.com/docs/getting-started/whats-neo4j/",
+            "https://neo4j.com/docs/cypher-manual/current/introduction/",
+            "https://neo4j.com/",
+            "https://neo4j.com/graphacademy/training-overview-40/02-overview40-neo4j-graph-platform/",
+            "https://en.wikipedia.org/wiki/Neo4j"
+        ],
+        "confidence": 0.9,
+        "status": "rejected",
+        "rejected_at": "2026-09-06T19:10:57.056541+00:00",
+        "action": "rejected",
+        "recorded_at": "2026-09-06T19:10:57.076744+00:00"
+    },
+    {
+        "skill_id": "neo4j",
+        "name": "Neo4j",
+        "aliases": [
+            "Neo4j Graph Database",
+            "Neo4j DBMS"
+        ],
+        "category": "Database",
+        "parent": null,
+        "related": [
+            "Cypher",
+            "Java",
+            "JavaScript",
+            ".NET",
+            "Python",
+            "Go",
+            "GraphQL",
+            "Spring"
+        ],
+        "prerequisites": [
+            "Java Virtual Machine (JVM)",
+            "Basic understanding of graph databases",
+            "Familiarity with Cypher query language"
+        ],
+        "unlocks": [
+            "Graph data modeling",
+            "Advanced data analytics",
+            "Graph-based application development"
+        ],
+        "sources": [
+            "https://neo4j.com/docs/getting-started/whats-neo4j/",
+            "https://neo4j.com/docs/cypher-manual/current/introduction/",
+            "https://neo4j.com/",
+            "https://neo4j.com/graphacademy/training-overview-40/02-overview40-neo4j-graph-platform/",
+            "https://en.wikipedia.org/wiki/Neo4j"
+        ],
+        "confidence": 0.9,
+        "status": "pending_review",
+        "action": "restored",
+        "recorded_at": "2026-09-06T19:11:20.612875+00:00"
+    },
+    {
+        "skill_id": "neo4j",
+        "name": "Neo4j",
+        "aliases": [
+            "Neo4j Graph Database",
+            "Neo4j DBMS"
+        ],
+        "category": "Database",
+        "parent": null,
+        "related": [
+            "Cypher",
+            "Java",
+            "JavaScript",
+            ".NET",
+            "Python",
+            "Go",
+            "GraphQL",
+            "Spring"
+        ],
+        "prerequisites": [
+            "Java Virtual Machine (JVM)",
+            "Basic understanding of graph databases",
+            "Familiarity with Cypher query language"
+        ],
+        "unlocks": [
+            "Graph data modeling",
+            "Advanced data analytics",
+            "Graph-based application development"
+        ],
+        "sources": [
+            "https://neo4j.com/docs/getting-started/whats-neo4j/",
+            "https://neo4j.com/docs/cypher-manual/current/introduction/",
+            "https://neo4j.com/",
+            "https://neo4j.com/graphacademy/training-overview-40/02-overview40-neo4j-graph-platform/",
+            "https://en.wikipedia.org/wiki/Neo4j"
+        ],
+        "confidence": 0.9,
+        "status": "approved",
+        "applied_at": "2026-09-06T19:11:57.889382+00:00",
+        "action": "approved_and_applied",
+        "recorded_at": "2026-09-06T19:11:57.892823+00:00"
+    }
+]
