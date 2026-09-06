@@ -182,29 +182,6 @@
         "unlocks": []
     },
     {
-        "id": "aws",
-        "name": "AWS",
-        "aliases": [
-            "aws"
-        ],
-        "category": "Pending",
-        "parent": null,
-        "related": [],
-        "status": "pending",
-        "prerequisites": [],
-        "unlocks": [],
-        "learning": {
-            "objectives": [
-                "Understand core AWS cloud concepts",
-                "Understand IAM and access control",
-                "Work with compute services",
-                "Work with storage services",
-                "Understand AWS networking fundamentals",
-                "Monitor AWS workloads"
-            ]
-        }
-    },
-    {
         "id": "azure",
         "name": "Azure",
         "aliases": [
@@ -580,33 +557,6 @@
         "status": "pending",
         "prerequisites": [],
         "unlocks": []
-    },
-    {
-        "id": "docker",
-        "name": "Docker",
-        "aliases": [
-            "docker"
-        ],
-        "category": "Pending",
-        "parent": null,
-        "related": [],
-        "status": "pending",
-        "prerequisites": [
-            "Linux"
-        ],
-        "unlocks": [
-            "Kubernetes"
-        ],
-        "learning": {
-            "objectives": [
-                "Understand containerization fundamentals",
-                "Build and manage Docker images",
-                "Write effective Dockerfiles",
-                "Run and manage containers",
-                "Understand Docker networking",
-                "Use Docker Compose"
-            ]
-        }
     },
     {
         "id": "docker_compose",
@@ -1220,34 +1170,6 @@
         "unlocks": []
     },
     {
-        "id": "kubernetes",
-        "name": "Kubernetes",
-        "aliases": [
-            "kubernetes"
-        ],
-        "category": "Pending",
-        "parent": null,
-        "related": [
-            "Terraform"
-        ],
-        "status": "pending",
-        "prerequisites": [
-            "Docker",
-            "Linux"
-        ],
-        "unlocks": [],
-        "learning": {
-            "objectives": [
-                "Understand Kubernetes architecture",
-                "Understand Pods and workloads",
-                "Deploy applications using Deployments",
-                "Work with Services and networking",
-                "Manage configuration and secrets",
-                "Understand Kubernetes scaling"
-            ]
-        }
-    },
-    {
         "id": "lambda",
         "name": "Lambda",
         "aliases": [
@@ -1622,14 +1544,32 @@
         "id": "neo4j",
         "name": "Neo4j",
         "aliases": [
-            "neo4j"
+            "Neo4j Graph Database",
+            "Neo4j DBMS"
         ],
-        "category": "Pending",
+        "category": "Database",
         "parent": null,
-        "related": [],
-        "status": "pending",
-        "prerequisites": [],
-        "unlocks": []
+        "related": [
+            "Cypher",
+            "Java",
+            "JavaScript",
+            ".NET",
+            "Python",
+            "Go",
+            "GraphQL",
+            "Spring"
+        ],
+        "status": "curated",
+        "prerequisites": [
+            "Java Virtual Machine (JVM)",
+            "Basic understanding of graph databases",
+            "Familiarity with Cypher query language"
+        ],
+        "unlocks": [
+            "Graph data modeling",
+            "Advanced data analytics",
+            "Graph-based application development"
+        ]
     },
     {
         "id": "nlp",
@@ -1674,14 +1614,27 @@
         "id": "numpy",
         "name": "NumPy",
         "aliases": [
-            "numpy"
+            "Numerical Python",
+            "np"
         ],
-        "category": "Pending",
-        "parent": null,
-        "related": [],
-        "status": "pending",
-        "prerequisites": [],
-        "unlocks": []
+        "category": "Library",
+        "parent": "Python",
+        "related": [
+            "SciPy",
+            "Pandas",
+            "Matplotlib",
+            "Scikit-learn"
+        ],
+        "status": "curated",
+        "prerequisites": [
+            "Python programming language"
+        ],
+        "unlocks": [
+            "Data analysis",
+            "Scientific computing",
+            "Machine learning",
+            "Numerical simulations"
+        ]
     },
     {
         "id": "object_detection",
@@ -2566,5 +2519,34 @@
         "status": "pending",
         "prerequisites": [],
         "unlocks": []
+    },
+    {
+        "id": "aws",
+        "name": "Amazon Web Services",
+        "aliases": [
+            "AWS"
+        ],
+        "category": "Cloud Computing",
+        "parent": null,
+        "related": [
+            "AWS Cloud Development Kit (CDK)",
+            "AWS Software Development Kit (SDK)",
+            "Cloud Native Applications",
+            "CI/CD Pipelines",
+            "Dependency Management"
+        ],
+        "status": "curated",
+        "prerequisites": [
+            "Basic understanding of cloud computing concepts",
+            "Familiarity with programming languages (e.g., Python, Java, JavaScript)",
+            "Knowledge of networking and security principles"
+        ],
+        "unlocks": [
+            "Cloud application development",
+            "Serverless architecture",
+            "Data storage solutions",
+            "Machine learning services",
+            "DevOps practices"
+        ]
     }
 ]
