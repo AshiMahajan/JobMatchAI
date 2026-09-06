@@ -12,7 +12,7 @@ skills = [
 
     "k8s",
 
-    "docker"
+    "numpy"
 ]
 
 print()

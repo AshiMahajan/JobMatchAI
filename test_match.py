@@ -1,30 +1,64 @@
 from skill_extractor import extract_skills
-from scorer import calculate_score
 
-resume_text = """
-Machine Learning Engineer skilled in Python,
-AWS, Docker, TensorFlow and MongoDB.
-"""
+from ats_engine import calculate_ats_score
 
-jd_text = """
-Looking for candidates with Python,
-AWS, Docker, Kubernetes, FastAPI
-and TensorFlow.
-"""
 
-resume_skills = extract_skills(resume_text)
-jd_skills = extract_skills(jd_text)
+def test_match():
 
-result = calculate_score(
-    resume_skills,
-    jd_skills
-)
+    resume_text = """
 
-print("\nATS Score:")
-print(result["score"])
+    Machine Learning Engineer skilled in Python,
 
-print("\nMatched Skills:")
-print(result["matched_skills"])
+    AWS, Docker, TensorFlow and MongoDB.
 
-print("\nMissing Skills:")
-print(result["missing_skills"])
+    """
+
+    jd_text = """
+
+    Looking for candidates with Python,
+
+    AWS, Docker, Kubernetes, FastAPI
+
+    and TensorFlow.
+
+    """
+
+    resume_skills = extract_skills(
+        resume_text
+    )
+
+    jd_skills = extract_skills(
+        jd_text
+    )
+
+    result = calculate_ats_score(
+
+        resume_skills,
+
+        jd_skills
+
+    )
+
+    assert result.score >= 0
+
+    assert result.score <= 100
+
+    assert isinstance(
+        result.exact_matches,
+        list
+    )
+
+    assert isinstance(
+        result.alias_matches,
+        list
+    )
+
+    assert isinstance(
+        result.semantic_matches,
+        list
+    )
+
+    assert isinstance(
+        result.missing_skills,
+        list
+    )
