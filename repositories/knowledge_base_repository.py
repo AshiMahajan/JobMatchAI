@@ -26,7 +26,9 @@ class KnowledgeBaseRepository:
     # GET ALL SKILLS
     # ==================================================
 
-    def get_all(self) -> list[dict]:
+    def get_all(
+        self,
+    ) -> list[dict]:
         """
         Return all skills from the Knowledge Base.
         """
@@ -34,7 +36,7 @@ class KnowledgeBaseRepository:
         return self._load()
 
     # ==================================================
-    # GET SKILL
+    # GET SKILL BY ID
     # ==================================================
 
     def get_skill(
@@ -45,16 +47,117 @@ class KnowledgeBaseRepository:
         Find a skill by its ID.
         """
 
+        if not isinstance(
+            skill_id,
+            str,
+        ) or not skill_id.strip():
+
+            return None
+
+        normalized_id = (
+            skill_id.strip().lower()
+        )
+
         skills = self._load()
 
         for skill in skills:
 
+            existing_id = skill.get(
+                "id",
+                "",
+            )
+
             if (
-                skill.get("id", "").lower()
-                == skill_id.lower()
+                isinstance(existing_id, str)
+                and existing_id.strip().lower()
+                == normalized_id
             ):
 
                 return skill
+
+        return None
+
+    # ==================================================
+    # GET SKILL BY NAME OR ALIAS
+    # ==================================================
+
+    def get_skill_by_name(
+        self,
+        skill_name: str,
+    ) -> dict | None:
+        """
+        Find a skill by its name or one of its aliases.
+
+        Matching is case-insensitive and ignores
+        leading/trailing whitespace.
+
+        Example:
+
+            "LightGBM"
+            "lightgbm"
+            "LGBM"
+
+        can all resolve to the same Knowledge Base
+        record if the name or alias exists.
+        """
+
+        if not isinstance(
+            skill_name,
+            str,
+        ) or not skill_name.strip():
+
+            return None
+
+        normalized_name = (
+            skill_name.strip().lower()
+        )
+
+        skills = self._load()
+
+        for skill in skills:
+
+            # ------------------------------------------
+            # CHECK OFFICIAL NAME
+            # ------------------------------------------
+
+            existing_name = skill.get(
+                "name",
+                "",
+            )
+
+            if (
+                isinstance(existing_name, str)
+                and existing_name.strip().lower()
+                == normalized_name
+            ):
+
+                return skill
+
+            # ------------------------------------------
+            # CHECK ALIASES
+            # ------------------------------------------
+
+            aliases = skill.get(
+                "aliases",
+                [],
+            )
+
+            if not isinstance(
+                aliases,
+                list,
+            ):
+
+                continue
+
+            for alias in aliases:
+
+                if (
+                    isinstance(alias, str)
+                    and alias.strip().lower()
+                    == normalized_name
+                ):
+
+                    return skill
 
         return None
 
@@ -73,16 +176,28 @@ class KnowledgeBaseRepository:
 
         skills = self._load()
 
+        normalized_id = (
+            skill_id.strip().lower()
+        )
+
         for index, skill in enumerate(skills):
 
+            existing_id = skill.get(
+                "id",
+                "",
+            )
+
             if (
-                skill.get("id", "").lower()
-                == skill_id.lower()
+                isinstance(existing_id, str)
+                and existing_id.strip().lower()
+                == normalized_id
             ):
 
                 skills[index] = updated_skill
 
-                self._write(skills)
+                self._write(
+                    skills
+                )
 
                 return updated_skill
 
@@ -102,24 +217,39 @@ class KnowledgeBaseRepository:
         """
         Add a new skill to the Knowledge Base.
 
-        Raises an error if the skill already exists.
+        Raises an error if the skill ID already exists.
         """
 
         skills = self._load()
 
-        skill_id = skill.get("id")
+        skill_id = skill.get(
+            "id"
+        )
 
-        if not skill_id:
+        if not isinstance(
+            skill_id,
+            str,
+        ) or not skill_id.strip():
 
             raise ValueError(
                 "Skill must contain an ID."
             )
 
+        normalized_id = (
+            skill_id.strip().lower()
+        )
+
         for existing in skills:
 
+            existing_id = existing.get(
+                "id",
+                "",
+            )
+
             if (
-                existing.get("id", "").lower()
-                == skill_id.lower()
+                isinstance(existing_id, str)
+                and existing_id.strip().lower()
+                == normalized_id
             ):
 
                 raise ValueError(
@@ -127,9 +257,13 @@ class KnowledgeBaseRepository:
                     "exists in Knowledge Base."
                 )
 
-        skills.append(skill)
+        skills.append(
+            skill
+        )
 
-        self._write(skills)
+        self._write(
+            skills
+        )
 
         return skill
 
@@ -137,7 +271,9 @@ class KnowledgeBaseRepository:
     # LOAD
     # ==================================================
 
-    def _load(self) -> list[dict]:
+    def _load(
+        self,
+    ) -> list[dict]:
         """
         Load the Knowledge Base JSON.
         """
@@ -150,7 +286,9 @@ class KnowledgeBaseRepository:
                 encoding="utf-8",
             ) as file:
 
-                data = json.load(file)
+                data = json.load(
+                    file
+                )
 
         except FileNotFoundError as error:
 
