@@ -39,6 +39,45 @@ def get_pending_enrichment_proposals():
 
 
 # ==================================================
+# RESEARCH SKILL
+# ==================================================
+
+@router.post("/research")
+def research_skill(
+    skill_name: str,
+):
+    """
+    Perform fresh web research for a technical skill.
+
+    IMPORTANT:
+
+    This endpoint does NOT consult the Knowledge Base.
+
+    Every request performs fresh research.
+    """
+
+    try:
+
+        result = (
+            enrichment_service.research_skill(
+                skill_name
+            )
+        )
+
+    except ValueError as error:
+
+        raise HTTPException(
+            status_code=400,
+            detail=str(error),
+        ) from error
+
+    return {
+        "skill": skill_name,
+        "research": result,
+    }
+
+
+# ==================================================
 # GET PROPOSAL
 # ==================================================
 
