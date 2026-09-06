@@ -46,15 +46,6 @@ def get_pending_enrichment_proposals():
 def research_skill(
     skill_name: str,
 ):
-    """
-    Perform fresh web research for a technical skill.
-
-    IMPORTANT:
-
-    This endpoint does NOT consult the Knowledge Base.
-
-    Every request performs fresh research.
-    """
 
     try:
 
@@ -180,10 +171,23 @@ def apply_enrichment_proposal(
 
     try:
 
+        # ------------------------------------------
+        # Apply to Knowledge Base
+        # ------------------------------------------
+
         curated_skill = (
             kb_enrichment_service.apply_proposal(
                 proposal
             )
+        )
+
+        # ------------------------------------------
+        # Delete proposal ONLY after successful
+        # Knowledge Base update
+        # ------------------------------------------
+
+        enrichment_service.repository.delete(
+            proposal.skill_id
         )
 
     except ValueError as error:
@@ -245,8 +249,42 @@ def reject_enrichment_proposal(
         ) from error
 
     return {
+
         "message": (
             "Enrichment proposal rejected."
         ),
+
         "proposal": rejected,
+    }
+
+# ==================================================
+# RESTORE REJECTED PROPOSAL
+# ==================================================
+
+@router.post("/{skill_id}/restore")
+def restore_rejected_proposal(
+    skill_id: str,
+):
+
+    try:
+
+        restored = (
+            enrichment_service.restore_rejected(
+                skill_id
+            )
+        )
+
+    except ValueError as error:
+
+        raise HTTPException(
+            status_code=400,
+            detail=str(error),
+        ) from error
+
+    return {
+        "message": (
+            "Rejected enrichment proposal "
+            "restored successfully."
+        ),
+        "proposal": restored,
     }
