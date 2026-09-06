@@ -75,3 +75,8 @@ build/
 
 testing.txt
 project_files.txt
+
+# Data
+data/enrichment_proposals.json
+data/rejected_enrichment_proposals.json
+data/enrichment_history.json
