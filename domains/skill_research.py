@@ -1,32 +1,34 @@
-from dataclasses import dataclass
+from pydantic import BaseModel, Field
 
 
-@dataclass
-class SkillResearchResult:
-    """
-    Represents the researched information
-    collected for a skill.
-
-    This object does not modify the
-    Knowledge Base.
-    """
+class SkillResearchResult(BaseModel):
 
     skill_id: str
 
     name: str
 
-    aliases: list[str]
+    aliases: list[str] = Field(
+        default_factory=list
+    )
 
     category: str
 
-    parent: str | None
+    parent: str | None = None
 
-    related: list[str]
+    related: list[str] = Field(
+        default_factory=list
+    )
 
-    prerequisites: list[str]
+    prerequisites: list[str] = Field(
+        default_factory=list
+    )
 
-    unlocks: list[str]
+    unlocks: list[str] = Field(
+        default_factory=list
+    )
 
-    sources: list[str]
+    sources: list[str] = Field(
+        default_factory=list
+    )
 
     confidence: float
