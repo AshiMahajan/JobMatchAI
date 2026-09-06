@@ -6,6 +6,7 @@ python-multipart
 spacy
 sentence-transformers
 torch
+scikit-learn
 
 pdfplumber
 python-docx
